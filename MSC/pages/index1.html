@@ -1,0 +1,187 @@
+<html>
+
+<head>
+     <meta charset="UTF-8"> 
+    <meta name=viewport content=width=device-width,initial-scale=1>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,900" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+
+
+    <link href="/mutesirjohn.github.io/MSC/style/first.css" rel="stylesheet">
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+
+    <audio id="audio0">
+  <source src="/mutesirjohn.github.io/MSC/content/POETRY%20OF%20THINGS.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+    <video autoplay muted loop playsinline class="video play-video" id="video0">
+  <source src="/mutesirjohn.github.io/MSC/content/MSC.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+    <video autoplay muted loop playsinline class="video" id="video1">
+  <source src="/mutesirjohn.github.io/MSC/content/Product.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+    <video autoplay muted loop playsinline class="video" id="video2">
+  <source src="/mutesirjohn.github.io/MSC/content/Lost%20at%20sea.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    <video autoplay muted loop playsinline class="video" id="video3">
+  <source src="/mutesirjohn.github.io/MSC/content/Storm%20at%20sea.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+    <video autoplay muted loop playsinline class="video" id="video4">
+  <source src="/mutesirjohn.github.io/MSC/content/Insurance.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+    <div class="content">
+
+        <div class="w3-container w3-yellow w3-hover-opacity permenant parent-hover-reveal" id="div0" onmouseleave="pauseMyAudio(0)" onmouseover="playMyVideo(0)" onmousedown="playMyAudio(0)">
+            <div class="current-time" id="time0"></div>
+            <h1 class="w3-fat">A poetry of things.</h1>
+            <p class="child-hover-reveal" id="poem0">I am matter, I am fable,<br> I am story, I am able,<br> To tell a tale of risk and sea,<br> Of products shipped by MSC,<br> Lost overboard on second day,<br> A story doomed to yesterday.</p>
+        </div>
+
+        <div class="w3-container w3-black w3-hover-opacity parent-hover-reveal" id="div1" onmouseleave="pauseMyAudio(1)" onmouseover="playMyVideo(1)" onmousedown="playMyAudio(1)">
+            <h2 class="w3-fat">Product</h2>
+            <p class="child-hover-reveal" id="poem1">I am virtue, I am vice, <br>I am worthless, I have price. <br>I am symbol, I am sin. <br>Stacked in boxes with my kin. <br>None like me, yet all the same, <br>All a part of some sick game.</p>
+        </div>
+
+        <div class="w3-container w3-black w3-hover-opacity parent-hover-reveal" id="div2" onmouseleave="pauseMyAudio(2)" onmouseover="playMyVideo(2)" onmousedown="playMyAudio(2)">
+            <h2 class="w3-fat">Flotsam</h2>
+            <p class="child-hover-reveal" id="poem2">I am floating, I am sinking, <br>Drifting weightless without thinking. <br>I cause wonder, I uproar, <br>Lost at sea or found on shore. <br>Will I be first to run aground? <br>I, the last one, never found.</p>
+        </div>
+
+        <div class="w3-container w3-black w3-hover-opacity parent-hover-reveal" id="div3" onmouseleave="pauseMyAudio(3)" onmouseover="playMyVideo(3)" onmousedown="playMyAudio(3)">
+            <h2 class="w3-fat">Sea</h2>
+            <p class="child-hover-reveal" id="poem3">I am legend, first frontier, <br>Mighty god of yesteryear. <br>I am killer, I am home, <br>Fickle friend and catacomb. <br>You must fear me, and prepare, <br>Take me lightly and dispair.</p>
+        </div>
+
+        <div class="w3-container w3-black w3-hover-opacity parent-hover-reveal" id="div4" onmouseleave="pauseMyAudio(4)" onmouseover="playMyVideo(4)" onmousedown="playMyAudio(4)">
+            <div class="current-time"></div>
+            <h2 class="w3-fat">Insurance</h2>
+            <p class="child-hover-reveal" id="poem4">I am written, underwritten,<br> I am signed, co-signed in Britain,<br> I am checked, re-checked and sent,<br> I am profit, I prevent,<br> The consequence of accident,<br> I am safety, for the one percent.</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    // Pause and play the video, and change the button text
+
+    function playMyVideo(index) {
+        console.log(index);
+        for (let i = 1; i < 5; i++) {
+            try {
+                var video = document.getElementById("video" + i);
+                video.classList.remove('play-video');
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        try {
+            var video = document.getElementById("video" + index);
+            console.log(video);
+            video.play();
+            video.classList.add('play-video');
+        } catch (err) {
+            console.log("video not available", index, err)
+        }
+    }
+
+    function playMyAudio(index) {
+        try {
+            var audio = document.getElementById("audio" + index);
+            var time = document.getElementById("time" + index);
+            console.log(audio);
+            time.style.transition = "all " + audio.duration + "s linear";
+            time.style.width = "100%";
+            audio.play();
+            //updateTime(index);
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    function updateTime(index) {
+        var audio = document.getElementById("audio" + index);
+        var time = document.getElementById("time" + index);
+        var div = document.getElementById("div" + index);
+        var percentageOfSong = (audio.currentTime / audio.duration)*100;
+        //var percentageOfSlider = document.getElementById('songSlider').offsetWidth * percentageOfSong;
+
+        console.log(audio, time, percentageOfSong);
+        //Updates the track progress div.
+        time.style.width = Math.round(percentageOfSong) + "%";
+        time.style.height = div.outerHeight;
+    }
+
+    function pauseMyAudio(index) {
+        try {
+            var audio = document.getElementById("audio" + index);
+            var time = document.getElementById("time" + index);
+            time.style.transition = "all 1s ease";
+
+            time.style.width = "0%";
+            console.log(audio);
+            audio.pause();
+            audio.currentTime = 0;
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    for (let i = 0; i < 5; i++) {
+        var div = document.getElementById("div" + i);
+
+        div.addEventListener('touchend', () => {
+
+            var div = document.getElementById("div" + i);
+            try {
+                var video = document.getElementById("video" + i);
+                video.play();
+            } catch (err) {
+                console.log(err);
+            }
+        });
+    }
+
+    for (let i = 0; i < 5; i++) {
+        var div = document.getElementById("div" + i);
+
+        div.addEventListener('touchend', () => {
+
+            for (let j = 0; j < 5; j++) {
+                let poem = document.getElementById("poem" + j)
+                poem.style.height = "0px";
+            }
+            let poem = document.getElementById("poem" + i);
+            poem.style.height = "200px";
+            //console.log(p);
+            //div.getElementsByClassName("child-hover-reveal").style.height("200px");
+        });
+    }
+
+</script>
+
+</html>
+

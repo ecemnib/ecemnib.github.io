@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="/mutesirjohn.github.io/MSC/scripts/aframe-stereo-component.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+
+</head>
+    
+    <style>
+        
+        .a-enter-vr-button{
+    visibility: hidden;
+}
+        
+    </style>
+
+
+<body>
+
+    <!-- Specify our scene. -->
+    <a-scene renderer="antialias:true" background="color: black" loading-screen="dotsColor: white; backgroundColor: black">
+        
+        <a-assets>
+            <video preload autoplay muted loop playsinline class="video" id="shipping" src="/mutesirjohn.github.io/MSC/content/Industrial%20Robot%20Factory%20-%208K%20-%20360%C2%B0%203D%20Animation%20-%20Cinematic%20Version-Hx4-jCi3dys.mp4">
+Your browser does not support the video tag.
+</video>
+        </a-assets>
+        
+        <a-entity id="rig" position="0 0 3.14">
+            <!---<a-entity id="rig" movement-controls>--->
+            <a-entity camera position="0 1.6 0" stereocam="eye:left;">
+            </a-entity>
+        </a-entity>
+
+        <a-entity visible="true" position="0 1.6 0">
+
+            <a-entity geometry="primitive: sphere; radius: 2; segmentsWidth: 64; segmentsHeight: 64" material="shader: flat; side:back; src: #shipping; opacity: 0.7" scale="-1 1 1" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 30000; loop: true; easing: linear">
+            </a-entity>
+
+        </a-entity>
+        
+    </a-scene>
+</body>
+</html>

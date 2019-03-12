@@ -1,0 +1,211 @@
+html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {}
+
+    body,
+    html {
+        background-color: black;
+        /* important */
+        height: 100%;
+        margin: 0px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p{
+        font-family: 'EB Garamond', serif;
+    }
+
+    .w3-container {
+        padding: 0.01em 16px;
+    }
+
+    .w3-container:before,
+    .w3-container:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    video {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        position: relative;
+        top: 0;
+        z-index: 2;
+        max-width: 500px;
+    }
+
+    .w3-fat {
+        font-weight: 900;
+    }
+
+    .w3-hover-opacity {
+        opacity: 0.2;
+        padding: 24px;
+        -webkit-transition: all 1s;
+        /* Safari */
+        transition: all 1s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .w3-yellow {
+        background-color: yellow;
+        color: #333;
+    }
+
+    .w3-black {
+        background-color: black;
+        color: white;
+    }
+
+    .w3-hover-opacity:hover {
+        opacity: 0.8;
+        padding: 32px;
+        padding-left: 84px;
+        -webkit-transition: all 1s;
+        /* Safari */
+        transition: all 1s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        /* Safari */
+        transition: opacity 1s;
+        transition-timing-function: ease-in-out;
+
+    }
+
+    .play-video {
+        opacity: 1;
+        -webkit-transition: opacity 1s;
+        /* Safari */
+        transition: opacity 1s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .parent-hover-reveal {
+        opacity: 0.1;
+        padding-left: 24px;
+        -webkit-transition: all 1s;
+        /* Safari */
+        transition: all 1s ease;
+    }
+
+    .parent-hover-reveal:click {
+        opacity: 0.8;
+        padding: 64px;
+        padding-left: 30%;
+        min-width: 300px;
+        height: auto;
+        -webkit-transition: opacity 1s ease,
+        padding 1s ease, height 1s 1s ease;
+        /* Safari */
+        transition: opacity 1s ease,
+        padding 1s ease, height 1s 1s ease;
+    }
+
+    .permenent {
+        opacity: 1;
+    }
+
+    .permenent:hover {
+        opacity: 1;
+    }
+
+    .child-hover-reveal {
+        padding-left: 24px;
+        min-width: 300px;
+        overflow: hidden;
+        height: 0;
+        -webkit-transition: opacity 1s ease,
+        padding 1s ease, height 1s ease;
+        transition: opacity 1s ease,
+        padding 1s ease, height 1s 1s ease;
+    }
+
+
+.current-time {
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color: black;
+    opacity: 0.5;
+    width: 0%;
+    height: 100%;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+
+
+
+    @media (pointer:fine) {
+        .parent-hover-reveal:hover>.child-hover-reveal {
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .parent-hover-reveal:hover {
+            padding: 24px;
+            -webkit-transition: all 1s ease;
+            /* Safari */
+            transition: all 1s ease;
+        }
+        .child-hover-reveal {
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+    }

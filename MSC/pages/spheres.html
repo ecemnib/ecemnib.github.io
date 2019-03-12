@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="/mutesirjohn.github.io/MSC/scripts/displacement-shader.js"></script>
+
+    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <link href="/mutesirjohn.github.io/MSC/style/second.css" rel="stylesheet">
+    <script src="/mutesirjohn.github.io/MSC/scripts/displace-text.js"></script>
+    <script src="/mutesirjohn.github.io/MSC/scripts/aframe-stereo-component.js"></script>
+    <script src="/mutesirjohn.github.io/MSC/scripts/last-draw.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Specify our scene. -->
+    <a-scene renderer="antialias:true;sortObjects:false" background="color: black" fog="type: exponential; color: #000; density: 0.05;" loading-screen="dotsColor: white; backgroundColor: black">
+
+        <a-assets>
+            <a-mixin preload id="text" text="color: #fff; transparent:false; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/librebaskerville/LibreBaskerville-Regular.json"></a-mixin>
+            <a-mixin mixin="text" id="title" position="0 2.5 -20" rotation="0 0 0" text="width: 40; baseline: bottom; anchor: align; align:center"></a-mixin>
+            <a-mixin id="poem" position="0 0 0" displace-text="width:2"></a-mixin>
+            <a-mixin mixin="text" id="footer" position="0 -0.5 0.5" rotation="-36 0" text="value: default; anchor: center; width: 1; wrapCount: 60.15; align:left; "></a-mixin>
+            <a-mixin id="video" position="0 10 -20" scale="30 20 20" material="" geometry=""></a-mixin>
+            <a-mixin id="effect" sound="loop:true; distanceModel:inverse; rolloffFactor:10; volume: 10; autoplay: true;"></a-mixin>
+            <a-mixin id="layout-child" look-at="#layout"></a-mixin>
+            <a-mixin id="checkpoint" geometry="primitive: cylinder" material="color: white" position="0 -0.9 0" checkpoint="offset: 0 -0.7 0" scale="0.1 0.05 0.1"></a-mixin>
+            <a-mixin id="viewpoint" position="0 0 0"></a-mixin>
+            <a-mixin id="blinder" position="0 0 0" rotation="0 0 0" geometry="primitive: box; width:0.05; height: 20; depth:20" material="color: grey; side: double"></a-mixin>
+            <a-mixin id="turn-sphere" class="sphere" geometry="primitive: sphere; radius: 1; segmentsWidth: 64; segmentsHeight: 64" material="shader: flat; side:back; opacity: 0.7" scale="-1 1 1" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 30000; loop: true; easing: linear"></a-mixin>
+            <a-mixin id="sphere" class="sphere" geometry="primitive: sphere; radius: 1; segmentsWidth: 64; segmentsHeight: 64" material="shader: flat; side:back; opacity: 0.7" scale="-1 1 1"></a-mixin>
+            <a-mixin id="stereo-sphere" mixin="sphere" stereo="split: vertical"></a-mixin>
+
+            <video autoplay muted loop playsinline class="" id="video0" src="/mutesirjohn.github.io/MSC/content/MSC.mp4">
+Your browser does not support the video tag.
+</video>
+            <audio preload id="audio0" src="/mutesirjohn.github.io/MSC/content/POETRY%20OF%20THINGS.mp3">
+Your browser does not support the audio element.
+</audio>
+
+            <video preload autoplay muted loop playsinline class="video" id="msc" src="/mutesirjohn.github.io/MSC/content/GlassCrane.mp4">
+Your browser does not support the video tag.
+</video>
+            <video preload autoplay muted loop playsinline class="video" id="flotsam" src="/mutesirjohn.github.io/MSC/content/drowning%20vr.mp4">
+Your browser does not support the video tag.
+</video>
+            <video preload autoplay muted loop playsinline class="video" id="insurance" src="/mutesirjohn.github.io/MSC/content/lloydsVR_SD_nologo.mp4">
+Your browser does not support the video tag.
+</video>
+            <video preload autoplay muted loop playsinline class="video" id="product" src="/mutesirjohn.github.io/MSC/content/Industrial%20Robot%20Factory%20-%208K%20-%20360%C2%B0%203D%20Animation%20-%20Cinematic%20Version-Hx4-jCi3dys.mp4">
+Your browser does not support the video tag.
+</video>
+            <video preload autoplay muted loop playsinline class="video" id="sea" src="/mutesirjohn.github.io/MSC/content/stormVR.mp4">
+Your browser does not support the video tag.
+</video>
+
+            <audio src="/mutesirjohn.github.io/MSC/content/BrownNoise.wav" autoplay loop preload volume="0.5"></audio>
+            <audio id="narration1" src="/mutesirjohn.github.io/MSC/content/POETRY%20OF%20THINGS.mp3" preload volume="0.5"></audio>
+            <audio id="foley1" src="/mutesirjohn.github.io/MSC/content/ProductSounds.wav"></audio>
+            <audio id="foley2" src="/mutesirjohn.github.io/MSC/content/FlotsamSounds.wav"></audio>
+            <audio id="foley4" src="/mutesirjohn.github.io/MSC/content/InsuranceSounds.wav" volume="0.5"></audio>
+            <audio id="foley3" src="/mutesirjohn.github.io/MSC/content/SeaSounds.wav"></audio>
+        </a-assets>
+
+
+
+        <a-entity id="cam" camera wasd-controls position="0 1.6 0" look-controls="pointerLockEnabled: true" stereocam="eye:left;">
+
+        </a-entity>
+
+        <a-entity position="0 0 0" rotation="0 0 0">
+
+
+            <a-entity position="0 -10 0" environment="preset: starry; grid:none; lightPosition: 0 -0.7 0"></a-entity>
+
+            <a-entity id="ocean" position="0 0 0" animation="property: position;dur:15000;from: 0 0 0;to: 0 1.3 0 ; loop:1;dir: alternate;easing:easeInOutQuad; startEvents:trigger">
+
+                <a-ocean position="0 0 0" width="50" depth="50" density="100" mesh-smooth material="color: #1d5c8f; opacity: 0.8; side: double"></a-ocean>
+            </a-entity>
+
+
+
+
+            <a-entity id="layout" layout="type: circle; radius: 2; plane: xz" position="0 1.5 0" rotation="0 90 0">
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: A Poetry of Things"></a-entity>
+                    <a-entity debug mixin="poem" displace-text="value: I am matter, I am fable, \n I am story, I am able, \n To tell a tale of risk and sea, \n Of products shipped by MSC, \n Lost overboard on second day, \n A story doomed to yesterday."></a-entity>
+
+                    <a-entity mixin="sphere" material="src: #msc">
+                    </a-entity>
+                    <a-entity mixin="viewpoint"></a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Product"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am virtue, I am vice, \n I am worthless, I have price. \n I am symbol, I am sin. \n Stacked in boxes with my kin. \n None like me, yet all the same, \n All a part of some sick game."></a-entity>
+
+                    <a-entity mixin="sphere" material="src: #product">
+                    </a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Flotsam"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am floating, I am sinking, \n Drifting weightless without thinking. \n I am wonder, I uproar, \n Lost at sea or found ashore. \n Will I be first to run aground? \n I, the last one, never found."></a-entity>
+                    <a-entity mixin="sphere" material="src: #flotsam">
+                    </a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Sea"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am legend, first frontier, \n Mighty god of yesteryear. \n I am killer, I am home, \n Fickle friend and catacomb. \n Many fear me, all prepare, \n Take me lightly and dispair."></a-entity>
+                    <a-entity mixin="sphere" material="src: #sea" animation="property: rotation;dur:15000;from: 5 0 0;to: -5 0 0 ; loop:true;autoplay:true;dir: alternate;easing:easeInOutQuad">
+                    </a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Insurance"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am written, underwritten, \n I am signed, co-signed in Britain, \n I am profit, I prevent, \n The consequence of accident, \n I am checked, re-checked and sent, \n I reassure the one percent."></a-entity>
+
+                    <a-entity mixin="stereo-sphere" material="src: #insurance" scale="-1 1 1" stereo="eye:left">
+                    </a-entity>
+                    <a-entity mixin="stereo-sphere" material="src: #insurance" scale="-1 1 1" stereo="eye:right">
+                    </a-entity>
+
+
+
+                </a-entity>
+            </a-entity>
+            <a-entity light="type: hemisphere; color: #AAA; groundColor: #000000; intensity: 0.9;"></a-entity>
+            <a-entity light="type: spot; color: #fff9cd; intensity: 0.8; decay: 4.1; castShadow: true; angle: 80" rotation="-90 0" position="0 2.7 0"></a-entity>
+
+        </a-entity>
+    </a-scene>
+</body>
+
+<script>
+    function playMyNarration(index) {
+        for (let i = 1; i < 5; i++) {
+            try {
+                var narration = document.getElementById("audio" + i);
+                narration.pause()
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        try {
+            var audio = document.getElementById("audio" + index);
+            audio.play();
+            console.log(audio);
+            //updateTime(index);
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    function playMyFoley(index) {
+        for (let i = 1; i < 5; i++) {
+            try {
+                var foley = document.getElementById("foley" + i);
+                foley.pause()
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        try {
+            var audio = document.getElementById("foley" + index);
+            audio.play();
+            console.log(audio);
+            //updateTime(index);
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    function animateSea() {
+        var ocean = document.getElementById("ocean");
+        var underwater = document.getElementById("underwater");
+        ocean.emit("trigger");
+        underwater.emit("trigger");
+        console.log("eventTriggered");
+    }
+
+</script>
+
+</html>

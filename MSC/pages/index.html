@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="/mutesirjohn.github.io/MSC/scripts/displacement-shader.js"></script>
+
+    <script src="https://unpkg.com/aframe-layout-component@5.3.0/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <link href="/mutesirjohn.github.io/MSC/style/second.css" rel="stylesheet">
+    <script src="/mutesirjohn.github.io/MSC/scripts/displace-text.js"></script>
+    <script src="/mutesirjohn.github.io/MSC/scripts/aframe-stereo-component.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Specify our scene. -->
+    <a-scene renderer="antialias:true" background="color: black" fog="type: exponential; color: #000; density: 0.05;" loading-screen="dotsColor: white; backgroundColor: black">
+
+        <a-assets>
+            <a-mixin preload id="title" position="0 21 -20" rotation="20 0 0" text="width: 80; baseline: bottom; anchor: align; color: #fff; transparent:false; align:center; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/librefranklin/LibreFranklin-Black.json"></a-mixin>
+            <a-mixin preload id="poem" position="0 0.6 0.2" displace-text></a-mixin>
+            <a-mixin preload id="footer" position="0 -0.5 0.5" rotation="-36 0" text="value: default; anchor: center; width: 1; wrapCount: 60.15; color: #fff; transparent:false; align:left; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/librefranklin/LibreFranklin-Regular.json"></a-mixin>
+            <a-mixin id="video" position="0 10 -20" scale="30 20 20" material="" geometry=""></a-mixin>
+            <a-mixin id="effect" sound="loop:true; distanceModel:inverse; rolloffFactor:10; volume: 10; autoplay: true;"></a-mixin>
+            <a-mixin id="layout-child" look-at="#layout"></a-mixin>
+            <a-mixin id="checkpoint" geometry="primitive: cylinder" material="color: white" position="0 -0.9 1.3" checkpoint="offset: 0 -0.7 0" scale="0.1 0.05 0.1"></a-mixin>
+            <a-mixin id="viewpoint" position="0 -0.2 1.3"></a-mixin>
+            <a-mixin id="blinder" position="0 0 0" rotation="0 0 0" geometry="primitive: box; width:0.05; height: 20; depth:20" material="color: grey; side: double"></a-mixin>
+
+            <video autoplay muted loop playsinline class="" id="video0" src="/mutesirjohn.github.io/MSC/content/MSC.mp4">
+Your browser does not support the video tag.
+</video>
+            <audio preload id="audio0" src="/mutesirjohn.github.io/MSC/content/POETRY%20OF%20THINGS.mp3">
+Your browser does not support the audio element.
+</audio>
+
+            <video autoplay muted loop playsinline class="video" id="video1" src="/mutesirjohn.github.io/MSC/content/Product.mp4">
+Your browser does not support the video tag.
+</video>
+
+            <video autoplay muted loop playsinline class="video" id="video2" src="/mutesirjohn.github.io/MSC/content/Lost%20at%20sea.mp4">
+Your browser does not support the video tag.
+</video>
+            <video autoplay muted loop playsinline class="video" id="video3" src="/mutesirjohn.github.io/MSC/content/Storm%20at%20sea.mp4">
+Your browser does not support the video tag.
+</video>
+
+            <video autoplay muted loop playsinline class="video" id="video4" src="/mutesirjohn.github.io/MSC/content/Insurance.mp4">
+Your browser does not support the video tag.
+</video>
+            <video autoplay muted loop playsinline class="video" id="insurance" src="/mutesirjohn.github.io/MSC/content/lloydsVR_SD.mp4">
+Your browser does not support the video tag.
+</video>
+            <audio src="/mutesirjohn.github.io/MSC/content/BrownNoise.wav" autoplay loop preload volume="0.5"></audio>
+            <audio id="narration1" src="/mutesirjohn.github.io/MSC/content/POETRY%20OF%20THINGS.mp3" preload volume="0.5"></audio>
+            <audio id="foley1" src="/mutesirjohn.github.io/MSC/content/ProductSounds.wav"></audio>
+            <audio id="foley2" src="/mutesirjohn.github.io/MSC/content/FlotsamSounds.wav"></audio>
+            <audio id="foley4" src="/mutesirjohn.github.io/MSC/content/InsuranceSounds.wav" volume="0.5"></audio>
+            <audio id="foley3" src="/mutesirjohn.github.io/MSC/content/SeaSounds.wav"></audio>
+        </a-assets>
+
+
+
+        <a-entity id="rig" movement-controls="controls: checkpoint" checkpoint-controls="mode: animate">
+            <!---<a-entity id="rig" movement-controls>--->
+            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true" stereocam="eye:left;">
+                <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.027; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="0 0 0" rotation="-5 0 0" animation="property: rotation;dur:15000;from: 5 0 0;to: -5 0 0 ; loop:true;autoplay:true;dir: alternate;easing:easeInOutQuad">
+
+
+            <a-entity position="0 -10 0" environment="preset: starry; grid:none; lightPosition: 0 -0.7 0"></a-entity>
+
+            <a-entity id="ocean" position="0 0 0" animation="property: position;dur:15000;from: 0 0 0;to: 0 1.3 0 ; loop:1;dir: alternate;easing:easeInOutQuad; startEvents:trigger">
+
+                <a-ocean position="0 0 0" width="50" depth="50" density="40" mesh-smooth material="color: #1d5c8f; opacity: 0.8; side: double"></a-ocean>
+            </a-entity>
+
+            <a-entity position="0 3 0" geometry="primitive: cylinder; height: 0.05; radius: 1.7" material="color:grey"></a-entity>
+            <a-entity position="0 2.9 0" geometry="primitive: cone; height: 0.04; radiusBottom: 0.2; radiusTop: 0.01; openEnded:true;" material="color:#fff9cd; shader: flat; side: back"></a-entity>
+            <a-entity position="0 2.88 0" geometry="primitive: sphere; radius: 0.04;" material="color:#fff; shader: flat"></a-entity>
+
+            <a-entity id="layout" layout="type: circle; radius: 11.2; plane: xz" position="0 1.8 0" rotation="0 54 0">
+                <a-entity mixin="blinder layout-child"></a-entity>
+                <a-entity mixin="blinder layout-child"></a-entity>
+                <a-entity mixin="blinder layout-child"></a-entity>
+                <a-entity mixin="blinder layout-child"></a-entity>
+                <a-entity mixin="blinder layout-child"></a-entity>
+
+            </a-entity>
+
+
+            <a-entity id="layout" layout="type: circle; radius: 2.5; plane: xz" position="0 1.8 0" rotation="0 90 0">
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: A Poetry of Things"></a-entity>
+                    <a-entity debug mixin="poem" displace-text="value: I am matter, I am fable, \n I am story, I am able, \n To tell a tale of risk and sea, \n Of products shipped by MSC, \n Lost overboard on second day, \n A story doomed to yesterday."></a-entity>
+                    <a-entity mixin="footer" text="value: The MSC accident is, lets face it, an insignificant event in the face of an inescapable global-capitalist world order. Accidents like this aren’t trivial, but we must critically question why, other the than sheer number of containers involved, this accident got so much coverage. Looking at worldwide google trend data for the past 12 months for the topic “shipping container” showed a sharp spike on the week of the accident. My running theory as to why this particular accident got so much attention is because it was close to a UNESCO natural heritage site in a rich western country. It ruptured the blissful ignorance clouding many a caffeinated mind about where all the crap they buy actually comes from."></a-entity>
+                    <a-video mixin="video" src="#video0" sound="src: #narration1" onmousedown="playMyNarration(0)"></a-video>
+                    <a-entity mixin="checkpoint" sound="src: #foley0" onmousedown="playMyFoley(0)"></a-entity>
+                    <a-entity mixin="viewpoint"></a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Product"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am virtue, I am vice, \n I am worthless, I have price. \n I am symbol, I am sin. \n Stacked in boxes with my kin. \n None like me, yet all the same, \n All a part of some sick game."></a-entity>
+                    <a-entity mixin="footer" text="value: Made-in-china doesn’t mentally translate to having sat, along with hundreds of identical “products”, in a cardboard box, along with hundreds of other cardboard boxes, in a steel box, along with thousands of other steel boxes, on a ship the size of the original world trade center, for thirty days. Those five euro headphones on discount in the Action? More well traveled and cultured than the average customer."></a-entity>
+                    <a-video mixin="video" src="#video1"></a-video>
+                    <a-entity mixin="checkpoint" sound="src: #foley1" onmousedown="playMyFoley(1)"></a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Flotsam"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am floating, I am sinking, \n Drifting weightless without thinking. \n I am wonder, I uproar, \n Lost at sea or found ashore. \n Will I be first to run aground? \n I, the last one, never found."></a-entity>
+                    <a-entity mixin="footer" text="value: The MSC accident captures an imagination of screeching metal, gargantuan lego bricks crashing 10 to 20 meters down onto the surface of a raging sea, smashing to pieces or escaping total destruction by some miracle, only to sink into a catacomb of ancient wrecks, or break apart hitting the sea bed, or float blissfully to shore, to be salvaged by the consumers who would have bought the crap in the first place. Full circle. \n
+It gives state institutions a chance to flex their legal muscles, it gives Frisian fishermen a spot on the evening news, it gives MSC some free publicity, it gives some teens in Terschelling hundreds of pink plastic ponies. But it doesn’t change anything. 
+"></a-entity>
+                    <a-video mixin="video" src="#video2"></a-video>
+                    <a-entity mixin="checkpoint" sound="src: #foley2" onmousedown="playMyFoley(2)"></a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Sea"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am legend, first frontier, \n Mighty god of yesteryear. \n I am killer, I am home, \n Fickle friend and catacomb. \n Many fear me, all prepare, \n Take me lightly and dispair."></a-entity>
+                    <a-entity mixin="footer" text="value: #MSCZoe a story doomed to the news cycle. Temporarily sating our insatiable appetite for destruction before dissolving in noise, leaving us numb. We wait, begging for the inevitable break in the monotony. Begging for the adrenaline of watching a natural disaster, a terrorist attack, a violent protest, live on twitter: Preferably close to home, but not so close that we feel we should do anything. \n
+
+This is yet another story where the symptoms disguise the cause. One where the will to profit takes another punch at the environment and gets away with it. We explain it away as an unfortunate accident, the regrettable outcome of an unavoidable risk of a process necessary to the proper functioning of our civilised society, of the free market. \n
+
+We need containers, we need ships. A more efficient method to transport non bulk goods does not exist. The question is whether the current system has adequate safeguards in place for the environment and for the livelihoods of those who have lived off of the sea for generations.\n
+
+It does not. In fact, it does the opposite. 
+"></a-entity>
+                    <a-video mixin="video" src="#video3"></a-video>
+                    <a-entity mixin="checkpoint" sound="src: #foley3" onmousedown="playMyFoley(3); animateSea()"></a-entity>
+
+
+                </a-entity>
+
+                <a-entity mixin="layout-child">
+
+                    <a-entity mixin="title" text="value: Insurance"></a-entity>
+                    <a-entity mixin="poem" displace-text="value: I am written, underwritten, \n I am signed, co-signed in Britain, \n I am profit, I prevent, \n The consequence of accident, \n I am checked, re-checked and sent, \n I reassure the one percent."></a-entity>
+
+                    <a-entity position="-0.55 0 0">
+                        <a-entity mixin="footer" text="value: Container loss, environmental damage, and the possibility of legal liability are calculable risks. Calculable risks can be insured. Insurance provides safety, rassurance. 
+
+It allows people to take risks with security. Would you go skiing without the reassurance that the 0.07% chance of a helicopter rescue and 4 weeks in a hospital wouldn’t come out of your pocket? No. We chose to let everybody pay 0.7% of the cost of failure, protecting any one person from the full brunt. 
+
+I managed to get into contact with an underwriter working at Lloyds of London, one of the largest insurance markets in the world: He wished to remain anonymous so let’s call him Dan. This is his run down of how insurance premiums for cargo are calculated. 
+
+                    1.83 billion tonnes of cargo are shipped annually, this equates to roughly 70 million container journeys, an estimated 1500 to 10000 of which are lost at sea. Taking the upper estimate, that is a 0.00014% risk of loss per journey. Due to environmental liability and the possibility of collateral damage, the cost associated with losing a container is more than the market value of the goods inside. On average, maybe double. Insurers usually double this to cover their operational costs, so lets say that the cost of losing a container, divided by the chance of actually losing it, is about 0.0006% of its cost."></a-entity>
+                    </a-entity>
+
+                    <a-entity position="0.55 0 0">
+                        <a-entity mixin="footer" text="value: Shipping wine? A forty foot container can hold 19500 bottles. If they had a market value of 5 euros a bottle, the cost to insure such a container against accidental loss would be about 60 euro. 60 euro for every container journey, meaning 4.2 billion in insurance premiums revenue annually: More than enough capital to cover the cost of failure. \n 
+                                                   This is of course, a rough estimate. Dan wishes to stress that insurance premiums take years of experience to calculate and are of course, extremely variable depending on the specific nature of the product, the route, the cost to insure against damage to the vessel and against damage to the harbour facilities etc. As to who pays the premiums, Dan says it depends. The company handling the container at the time of loss or damage is liable, but the costs are inevitably passed on to the consumer. Some small fraction of the 5 euro you pay for the terrible headphones at Action goes into the pockets of Lloyds. \n 
+                                                   The system is constructed in such a way that the people paying for #MSCZoe are the people buying the products it shipped. There is no incentive for shipping companies to pay out of pocket to decrease the risk of container loss as paying the premiums and cleaning up the occasional mess is so much cheaper than preventing the mess in the first place. \n 
+                                                   The only incentives they understand are regulatory. But regulation goes against the principles of the free market. And I need those headphones.
+                        "></a-entity>
+                    </a-entity>
+
+                    <a-video mixin="video" src="#video4"></a-video>
+                    <a-entity mixin="checkpoint" sound="src: #foley4" onmousedown="playMyFoley(4)"></a-entity>
+
+                    
+
+                </a-entity>
+            </a-entity>
+            <a-entity light="type: hemisphere; color: #AAA; groundColor: #000000; intensity: 0.9;"></a-entity>
+            <a-entity light="type: spot; color: #fff9cd; intensity: 0.8; decay: 4.1; castShadow: true; angle: 80" rotation="-90 0" position="0 2.7 0"></a-entity>
+            <a-entity light="type: point; color: #fff9cd; intensity: 0.2; decay: 4.1; castShadow: true" rotation="-90 0" position="0 2.5 0"></a-entity>
+
+        </a-entity>
+    </a-scene>
+</body>
+
+<script>
+    function playMyNarration(index) {
+        for (let i = 1; i < 5; i++) {
+            try {
+                var narration = document.getElementById("audio" + i);
+                narration.pause()
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        try {
+            var audio = document.getElementById("audio" + index);
+            audio.play();
+            console.log(audio);
+            //updateTime(index);
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    function playMyFoley(index) {
+        for (let i = 1; i < 5; i++) {
+            try {
+                var foley = document.getElementById("foley" + i);
+                foley.pause()
+            } catch (err) {
+                console.log(err);
+            }
+        }
+        try {
+            var audio = document.getElementById("foley" + index);
+            audio.play();
+            console.log(audio);
+            //updateTime(index);
+        } catch (err) {
+            console.log("audio not available", index, err)
+        }
+    }
+
+    function animateSea() {
+        var ocean = document.getElementById("ocean");
+        var underwater = document.getElementById("underwater");
+        ocean.emit("trigger");
+        underwater.emit("trigger");
+        console.log("eventTriggered");
+    }
+
+</script>
+
+</html>
