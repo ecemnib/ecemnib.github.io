@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Matteo</title>
-    <meta name=viewport content=width=device-width,initial-scale=1>
+    <meta name=viewport content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="halo.css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 
 
 <body class="container colors">
-    <div id="name" onmouseover="showmenu()" onmouseout="hidemenu()">
+    <div id="name" onclick="togglemenu()">
         <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
         <ol id="menu" class="">
             <li><a href="#halo">Halo</a></li>
@@ -26,11 +26,11 @@
             <li><a href="#messer">Messer</a></li>
             <li><a href="#nest">Nest</a></li>
         </ol>
-            </div>
+    </div>
     <div id="halo" class="projectWrapper">
         <h1 class="pathos padding sticky">Halo</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="1_Halo/_Halo.mp4">Video not available</video>
+            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay loop muted src="1_Halo/_Halo.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides1">
                     <img src="1_Halo/Slideshow/Halo_1.jpg" style="width:100%">
@@ -43,11 +43,11 @@
                 <div class="mySlides1">
                     <img src="1_Halo/Slideshow/Halo_3.jpg" style="width:100%">
                 </div>
-                
+
                 <div class="mySlides1">
                     <img src="1_Halo/Slideshow/Halo_4.jpg" style="width:100%">
                 </div>
-                
+
                 <div class="mySlides1">
                     <img src="1_Halo/Slideshow/Halo_5.jpg" style="width:100%">
                 </div>
@@ -78,7 +78,7 @@
     <div id="blubblub" class="projectWrapper">
         <h1 class="pathos padding sticky">Blubblub</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="2_Blubblub/_Blubblub.mp4">Video not available</video>
+            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay loop muted src="2_Blubblub/_Blubblub.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides2">
                     <img src="2_Blubblub/Slideshow/Blubblub_1.jpg" style="width:100%">
@@ -110,7 +110,7 @@
                 <a class="prev pathos" onclick="plusSlides(-1, 1)">&#10094;</a>
                 <a class="next pathos" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Bei diesem Projekt handelt es sich um ein Gerät, welches eine Schnittstelle zwischen Mensch und Computer bilden soll. Mit ihm können durch Intuitive Eingabe virtuelle Körper erzeugt werden. Die Art der Eingabe orientiert sich dabei an handwerklichen Vorgehensweisen, ist also auf manueller Fertigkeit beruhend. Das Gerät nimmt ähnlich wie ein Touchscreen, allerdings wesentlich detaillierter die Berührungspunkte der Hand auf einer Fläche ab. Die Silhouetten der Abdrücke werden vom Rechner kontinuierlich übereinander geschichtet und anschließend zu einem dreidimensionalem Körper  zusammen gesetzt. Das ganze geschieht beinahe in Echtzeit. Vom Benutzer soll der anfängliche Gebrauch keine speziellen Kenntnis erfordern. Der Erwerb weitere Fähigkeiten ergibt sich alleine aus dem Lernprozess, der aus der Anwendung resultiert, also kognitiv ist.</div>
+            <div class="markpro padding-sides description">Bei diesem Projekt handelt es sich um ein Gerät, welches eine Schnittstelle zwischen Mensch und Computer bilden soll. Mit ihm können durch Intuitive Eingabe virtuelle Körper erzeugt werden. Die Art der Eingabe orientiert sich dabei an handwerklichen Vorgehensweisen, ist also auf manueller Fertigkeit beruhend. Das Gerät nimmt ähnlich wie ein Touchscreen, allerdings wesentlich detaillierter die Berührungspunkte der Hand auf einer Fläche ab. Die Silhouetten der Abdrücke werden vom Rechner kontinuierlich übereinander geschichtet und anschließend zu einem dreidimensionalem Körper zusammen gesetzt. Das ganze geschieht beinahe in Echtzeit. Vom Benutzer soll der anfängliche Gebrauch keine speziellen Kenntnis erfordern. Der Erwerb weitere Fähigkeiten ergibt sich alleine aus dem Lernprozess, der aus der Anwendung resultiert, also kognitiv ist.</div>
             <div class="pathos padding tags">2015; Aluminium, Acrylglas, PVC, Ir-LEDs, Raspberry Pi, NoIR Infrared Camera</div>
         </div>
     </div>
@@ -118,7 +118,7 @@
     <div id="knautsch" class="projectWrapper">
         <h1 class="pathos padding sticky">Knautsch</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="3_Knautsch/_Knautsch.mp4">Video not available</video>
+            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay loop muted src="3_Knautsch/_Knautsch.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides3">
                     <img src="3_Knautsch/Slideshow/Knautsch_1.jpg" style="width:100%">
@@ -144,11 +144,11 @@
             <div class="pathos padding tags">2015 — 16</div>
         </div>
     </div>
-    
+
     <div id="younit" class="projectWrapper">
         <h1 class="pathos padding sticky">Younit</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="4_Younit/_Younit.mp4">Video not available</video>
+            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay loop muted src="4_Younit/_Younit.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides4">
                     <img src="4_Younit/Slideshow/Younit_1.jpg" style="width:100%">
@@ -200,11 +200,11 @@
             <div class="pathos padding tags">2016; Stahl, Alu, Drahtglas, Corian, OSB, Marmor, Kalkstein, Sperrholz, Acrylglas, Spanplatte, Kupfer, wasserstrahlgeschnitten</div>
         </div>
     </div>
-    
+
     <div id="sole" class="projectWrapper">
         <h1 class="pathos padding sticky">Sole</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="5_Sole/_Sole.mp4">Video not available</video>
+            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted src="5_Sole/_Sole.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides5">
                     <img src="5_Sole/Slideshow/Sole_1.jpg" style="width:100%">
@@ -241,14 +241,14 @@
                 <a class="next pathos" onclick="plusSlides(1, 4)">&#10095;</a>
             </div>
             <div class="markpro padding-sides description">Bei Sole handelt es ich um einen Klapptisch der dank eines raffinierten Mechanismus mit nur einem Handgriff in Position gebracht werden kann. Das Besondere dabei ist, dass die Konstruktion keine zusätzliche Fixierung benötigt, da sie sich durch eine spezielle Geometrie selbst stabilisiert. Zusammengeklappt ist der Tisch gerade einmal 2,5 cm dünn und ergibt an die Wand gelehnt ein graphisches Abbild seiner selbst. Bis auf die lasergeschnittenen Bestandteile des Tisches, wurde bewusst auf komplizierte Herstellungsprozesse verzichtet, sodass „Sole“ mit gewöhnlichen Mitteln und gängigen Techniken, im Rahmen einer Manufaktur produziert werden kann.</div>
-            <div class="pathos padding tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium,  sandgestrahlt, transparent pulverbeschichtet</div>
+            <div class="pathos padding tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
         </div>
     </div>
-    
+
     <div id="123" class="projectWrapper">
         <h1 class="pathos padding sticky">123</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="6_Minigolf/_Minigolf.mp4">Video not available</video>
+            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted src="6_Minigolf/_Minigolf.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides6">
                     <img src="6_Minigolf/Slideshow/123_1.jpg" style="width:100%">
@@ -285,11 +285,11 @@
             <div class="pathos padding tags">2015; MDF, CNC-gefräst, lackiert, Aluminium</div>
         </div>
     </div>
-    
+
     <div id="transit" class="projectWrapper">
         <h1 class="pathos padding sticky">Transit</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="7_Lastenrad/_Lastenrad.mp4">Video not available</video>
+            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted src="7_Lastenrad/_Lastenrad.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides7">
                     <img src="7_Lastenrad/Slideshow/Transit_1.jpg" style="width:100%">
@@ -320,11 +320,11 @@
             <div class="pathos padding tags">2013 — 2014; verschiedene Materialien</div>
         </div>
     </div>
-    
+
     <div id="messer" class="projectWrapper">
         <h1 class="pathos padding sticky">Messer</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="8_Messer/_Messer.mp4">Video not available</video>
+            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted src="8_Messer/_Messer.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides8">
                     <img src="8_Messer/Slideshow/Messer_1.jpg" style="width:100%">
@@ -349,11 +349,11 @@
             <div class="pathos padding tags">2016; HSS Stahl (Sägeblatt), wasserstrahlgeschnitten, Corian, Ebenholz, Ahorn, Eibe</div>
         </div>
     </div>
-    
+
     <div id="nest" class="projectWrapper">
         <h1 class="pathos padding sticky">Nest</h1>
         <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" loop muted src="9_Nest/_Nest.mp4">Video not available</video>
+            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted src="9_Nest/_Nest.mp4">Video not available</video>
             <div class="slideshow">
                 <div class="mySlides9">
                     <img src="9_Nest/Slideshow/Nest_1.jpg" style="width:100%">
@@ -390,7 +390,7 @@
             <div class="pathos padding tags">2012 — 2014; Aluminium, Stahl, wasserstrahlgeschnitten, verkeilt, glasperlgestrahlt, verzundert, brüniert</div>
         </div>
     </div>
-    
+
     <br>
 
 </body>

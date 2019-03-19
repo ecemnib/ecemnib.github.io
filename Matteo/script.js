@@ -98,4 +98,22 @@ function hidemenu(){
     menu.style.paddingLeft = "0px";
 }
 
+function togglemenu(){
+    var menu = document.getElementById("menu");
+    var name = document.getElementById("nametext");
+    var state = menu.style.opacity;
+    if (state == 0){
+        name.innerHTML = "Menu";
+    menu.style.opacity = 1;
+    menu.style.height = "320px";
+    menu.style.paddingLeft = "50px";
+    } else if (state == 1){
+        name.innerHTML = "Matteo Bauer-Bornemann";
+    menu.style.opacity = 0;
+    menu.style.height = "0px";
+    menu.style.paddingLeft = "0px";
+    }
+    
+}
+
 
