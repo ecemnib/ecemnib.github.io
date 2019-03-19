@@ -79,17 +79,17 @@ window.onload = function () {
     setTimeout("plusSlides(1, 0)", 3000);
 }
 
-function showmenu(){
+function showmenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
     name.innerHTML = "Menu";
     menu.style.opacity = 1;
     menu.style.height = "320px";
     menu.style.paddingLeft = "50px";
-    
+
 }
 
-function hidemenu(){
+function hidemenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
     name.innerHTML = "Matteo Bauer-Bornemann";
@@ -98,22 +98,20 @@ function hidemenu(){
     menu.style.paddingLeft = "0px";
 }
 
-function togglemenu(){
+function togglemenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
     var state = menu.style.opacity;
-    if (state == 0){
+    if (state == 0) {
         name.innerHTML = "Menu";
-    menu.style.opacity = 1;
-    menu.style.height = "320px";
-    menu.style.paddingLeft = "50px";
-    } else if (state == 1){
+        menu.style.opacity = 1;
+        menu.style.height = "320px";
+        menu.style.paddingLeft = "50px";
+    } else if (state == 1) {
         name.innerHTML = "Matteo Bauer-Bornemann";
-    menu.style.opacity = 0;
-    menu.style.height = "0px";
-    menu.style.paddingLeft = "0px";
+        menu.style.opacity = 0;
+        menu.style.height = "0px";
+        menu.style.paddingLeft = "0px";
     }
-    
+
 }
-
-

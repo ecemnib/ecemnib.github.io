@@ -101,6 +101,17 @@ a {
     z-index: 5;
 }
 
+.overlay {
+    clear: both;
+    float: left;
+    background-color: #fffc;
+    -moz-box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, .8);
+    -webkit-box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 20px 20px rgba(255, 255, 255, .8);
+    border-radius: 0 0px 50px 0;
+    
+}
+
 .description {
     font-size: 35px;
     line-height: 40px;
@@ -159,6 +170,7 @@ a {
 .mySlides7,
 .mySlides8,
 .mySlides9 {
+    height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -220,7 +232,7 @@ ol a {
     .padding {
         padding: 30px;
     }
-    .project{
+    .project {
         top: -90px;
     }
 
@@ -234,6 +246,53 @@ ol a {
         padding: 30px;
         padding-top: 30%;
         font-size: 30px;
+    }
+    .overlay{
+        -moz-box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, .8);
+    -webkit-box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, .8);
+    border-radius: 0 0px 30px 0;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+    .description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    #name {
+        padding-left: 24px;
+    }
+    .pathos {
+        font-size: 24px;
+    }
+    .padding {
+        padding: 24px;
+    }
+    .project {
+        top: -72px;
+    }
+
+    .padding-sides {
+        padding-top: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .prev,
+    .next {
+        padding: 24px;
+        padding-top: 30%;
+        font-size: 24px;
+    }
+    .overlay{
+        -moz-box-shadow: 0px 0px 12px 12px rgba(255, 255, 255, .8);
+    -webkit-box-shadow: 0px 0px 12px 12px rgba(255, 255, 255, .8);
+    box-shadow: 0px 0px 12px 12px rgba(255, 255, 255, .8);
+    border-radius: 0 0px 24px 0;
     }
 
 }
