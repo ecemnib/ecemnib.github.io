@@ -65,10 +65,10 @@ h6 {
     text-transform: uppercase;
     padding-bottom: 3px;
     z-index: 6;
-    -webkit-transition: all ease 1s;
-    -moz-transition: all ease 1s;
-    -o-transition: all ease 1s;
-    transition: all ease 1s;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    transition: all ease 0.2s;
 
 }
 
