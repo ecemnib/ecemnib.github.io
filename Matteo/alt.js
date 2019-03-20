@@ -42,13 +42,18 @@ function showSlides(n, no) {
     if (n < 1) {
         slideIndex[no] = numOfSlides
     }
+
     for (i = 0; i < numOfSlides; i++) {
         allSlides[i].className = slideId[no] + " padding";
     }
+
     allSlides[slideIndex[no] - 1].className = slideId[no] + " showing padding";
+
     var parent = allSlides[slideIndex[no] - 1].parentNode.parentNode;
     var index = slideIndex[no];
+
     console.log((index - 1), index, (index + 1));
+
     var prev = parent.getElementsByClassName("prev");
     var next = parent.getElementsByClassName("next");
     var prevnum;
@@ -56,14 +61,21 @@ function showSlides(n, no) {
 
     prevnum = pad((index - 1), 2);
     nextnum = pad((index + 1), 2);
+    
+    prev[0].style.visibility = "visible";
+    next[0].style.visibility = "visible";
 
     if (index == 1) {
         prevnum = pad(numOfSlides, 2);
+        prev[0].style.visibility = "hidden";
     }
     if (index == numOfSlides) {
         nextnum = pad(1, 2);
+        document.getElementById(no + 1).style.visibility = "hidden";
+        next[0].style.visibility = "hidden";
+    } else {
+        document.getElementById(no + 1).style.visibility = "visible";
     }
-
     /*
     prev[0].innerHTML = "< " + prevnum + "/" + pad(numOfSlides, 2);
     next[0].innerHTML = nextnum + "/" + pad(numOfSlides, 2) + " >";*/
@@ -75,18 +87,12 @@ function pad(n, width, z) {
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
 
-window.onload = function () {
-
-    setTimeout("plusSlides(1, 0)", 3000);
-}
-
 function showmenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
-    name.innerHTML = "Menu";
+    name.innerHTML = "Kontakt";
     menu.style.opacity = 1;
-    menu.style.height = "320px";
-    menu.style.paddingLeft = "50px";
+    menu.style.height = "120px";
 
 }
 
@@ -96,23 +102,27 @@ function hidemenu() {
     name.innerHTML = "Matteo Bauer-Bornemann";
     menu.style.opacity = 0;
     menu.style.height = "0px";
-    menu.style.paddingLeft = "0px";
 }
 
 function togglemenu() {
+    var div = document.getElementById("name");
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
+    
     var state = menu.style.opacity;
+    
     if (state == 0) {
-        name.innerHTML = "Menu";
+        name.innerHTML = "Kontakt";
+        div.style.color = "#fff";
+        div.style.backgroundColor = "#2e2382";
         menu.style.opacity = 1;
-        menu.style.height = "320px";
-        menu.style.paddingLeft = "50px";
+        menu.style.height = "120px";
     } else if (state == 1) {
         name.innerHTML = "Matteo Bauer-Bornemann";
+        div.style.color = "#2e2382";
+        div.style.backgroundColor = "#fff";
         menu.style.opacity = 0;
         menu.style.height = "0px";
-        menu.style.paddingLeft = "0px";
     }
 
 }
