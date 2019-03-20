@@ -112,7 +112,7 @@ a {
 
 .video {
     position: relative;
-    right:0;
+    right: 0;
     width: 100%;
     height: 100%;
     max-height: 100vh;
@@ -122,6 +122,7 @@ a {
 .slideshow {
     position: relative;
     height: calc(66vw - 150px);
+    max-height: calc(100vh - 150px);
     max-width: 100vw;
 }
 
@@ -166,7 +167,7 @@ a {
 .mySlides8,
 .mySlides9 {
     height: 100%;
-    width:100%;
+    width: 100%;
     overflow: auto;
     position: absolute;
     top: 0px;
@@ -179,8 +180,12 @@ a {
 }
 
 img {
-    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     max-height: 100%;
+    max-width: 100%;
 }
 
 .description,
@@ -192,7 +197,7 @@ img {
 
 }
 
-.title{
+.title {
     display: none;
 }
 
@@ -244,7 +249,7 @@ img {
     .description,
     .tags {
         font-size: 18px;
-    line-height: 20px;
+        line-height: 20px;
         padding-top: 30px;
     }
 
@@ -263,8 +268,9 @@ img {
     h6 {
         line-height: 30px;
     }
-    .slideshow{
-        height: calc(66vw - 110px);
+
+    .slideshow {
+        height: calc(80vw);
     }
 
 }
@@ -292,7 +298,7 @@ img {
     .description,
     .tags {
         font-size: 14px;
-    line-height: 18px;
+        line-height: 18px;
         padding-top: 24px;
     }
 
@@ -317,8 +323,9 @@ img {
     h6 {
         line-height: 24px;
     }
-    .slideshow{
-        height: calc(66vw - 98px);
+
+    .slideshow {
+        height: calc(100vw);
     }
 
 }
