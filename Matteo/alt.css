@@ -121,7 +121,7 @@ a {
 
 .slideshow {
     position: relative;
-    height: calc(66vw - 50px);
+    height: calc(66vw - 150px);
     max-width: 100vw;
 }
 
@@ -263,6 +263,9 @@ img {
     h6 {
         line-height: 30px;
     }
+    .slideshow{
+        height: calc(66vw - 110px);
+    }
 
 }
 
@@ -313,6 +316,9 @@ img {
     h5,
     h6 {
         line-height: 24px;
+    }
+    .slideshow{
+        height: calc(66vw - 98px);
     }
 
 }
