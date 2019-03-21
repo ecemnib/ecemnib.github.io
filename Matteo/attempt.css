@@ -229,7 +229,6 @@ img {
     }
 
     #name {
-        padding-left: 30px;
     }
 
     .pathos {
@@ -237,13 +236,12 @@ img {
     }
 
     .padding {
-        padding: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .padding-sides {
         padding-top: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
     }
 
     .description,
@@ -255,9 +253,7 @@ img {
 
     .prev,
     .next {
-        font-size: 30px;
-        top: calc(50% - 15px);
-        width: 30px;
+
     }
 
     h1,
@@ -282,7 +278,6 @@ img {
     }
 
     #name {
-        padding-left: 24px;
     }
 
     .pathos {
@@ -290,7 +285,8 @@ img {
     }
 
     .padding {
-        padding: 24px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     .project {}
@@ -304,15 +300,11 @@ img {
 
     .padding-sides {
         padding-top: 24px;
-        padding-left: 24px;
-        padding-right: 24px;
     }
 
     .prev,
     .next {
-        font-size: 24px;
-        top: calc(50% - 12px);
-        width: 24px;
+font-size: 70px;
     }
 
     h1,

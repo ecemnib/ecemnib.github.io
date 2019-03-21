@@ -49,7 +49,9 @@ function showSlides(n, no) {
 
     allSlides[slideIndex[no] - 1].className = slideId[no] + " showing padding";
 
-    var parent = allSlides[slideIndex[no] - 1].parentNode.parentNode;
+    var slideshow = allSlides[slideIndex[no] - 1].parentNode;
+    var parent = slideshow.parentNode;
+    console.log(slideshow, parent);
     var index = slideIndex[no];
 
     console.log((index - 1), index, (index + 1));
