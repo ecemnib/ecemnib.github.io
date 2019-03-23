@@ -78,9 +78,11 @@ function showSlides(n, no) {
     if (index == numOfSlides) {
         nextnum = pad(1, 2);
         document.getElementById(no + 1).style.visibility = "hidden";
+        document.getElementById(no + 1).style.display = "none";
         next[0].style.visibility = "hidden";
     } else {
         document.getElementById(no + 1).style.visibility = "visible";
+        document.getElementById(no + 1).style.display = "block";
     }
     /*
     prev[0].innerHTML = "< " + prevnum + "/" + pad(numOfSlides, 2);
