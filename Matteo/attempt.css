@@ -121,9 +121,9 @@ a {
 
 .slideshow {
     position: relative;
-    height: 100vh;
-    max-height: calc(100vh - 150px);
-    max-width: 100vw;
+    min-height: 100vh;
+/*    max-height: calc(100vh - 150px);
+*/    max-width: 100vw;
 }
 
 .prev {
@@ -168,15 +168,19 @@ a {
 .mySlides9 {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     position: absolute;
-    top: 0px;
-    opacity: 0;
+/*    top: 0px;
+*/    opacity: 0;
     z-index: 1;
     -webkit-transition: opacity ease 1s;
     -moz-transition: opacity ease 1s;
     -o-transition: opacity ease 1s;
     transition: opacity ease 1s;
+}
+
+.relativeSlide {
+    position: relative;
+    display: block;
 }
 
 /* when a work's description-slide is active, set the slide's overflow to auto */
