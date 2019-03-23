@@ -45,18 +45,12 @@ function showSlides(n, no) {
 
     for (i = 0; i < numOfSlides; i++) {
         var slide = allSlides[i];
-            slide.classList.remove("showing", "overflow-scroll");
+            slide.classList.remove("showing");
             slide.classList.add(slideId[no], "padding");
     }
 
     var activeSlide = allSlides[slideIndex[no] - 1];
 
-    // all slides's overflow is set to hidden by default.
-    // when a description slide becomes active set it's overflow to auto.
-    // data-text-content attribute needs to be set manually to every description slide in html
-    if(activeSlide.hasAttribute("data-text-content")){
-        activeSlide.classList.add("overflow-auto");
-    }
     activeSlide.classList.add("showing");
 
     var slideshow = activeSlide.parentNode;
@@ -84,9 +78,11 @@ function showSlides(n, no) {
     if (index == numOfSlides) {
         nextnum = pad(1, 2);
         document.getElementById(no + 1).style.visibility = "hidden";
+        document.getElementById(no + 1).style.display = "none";
         next[0].style.visibility = "hidden";
     } else {
         document.getElementById(no + 1).style.visibility = "visible";
+        document.getElementById(no + 1).style.display = "block";
     }
     /*
     prev[0].innerHTML = "< " + prevnum + "/" + pad(numOfSlides, 2);
