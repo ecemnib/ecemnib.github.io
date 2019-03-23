@@ -269,9 +269,6 @@ img {
         line-height: 30px;
     }
 
-    .slideshow {
-        max-height: calc(66vh - 110px);
-    }
 
 }
 
@@ -322,10 +319,6 @@ img {
     h5,
     h6 {
         line-height: 24px;
-    }
-
-    .slideshow {
-        max-height: calc(50vh - 98px);
     }
 
 }
