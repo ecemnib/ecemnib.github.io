@@ -267,6 +267,7 @@ img {
     .next {
         font-size: 45px;
         width: 30px;
+        top: calc(25vh - 125px);
     }
 
     h1,
@@ -277,6 +278,8 @@ img {
     h6 {
         line-height: 30px;
     }
+    
+    .slideshow{min-height: 50vh;}
 
 }
 
@@ -316,6 +319,7 @@ img {
     .next {
 font-size: 30px;
         width: 24px;
+        top: calc(15vh - 125px);
     }
 
     h1,
@@ -326,5 +330,7 @@ font-size: 30px;
     h6 {
         line-height: 24px;
     }
+    
+    .slideshow{min-height: 30vh;}
 
 }
