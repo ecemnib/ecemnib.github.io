@@ -168,7 +168,7 @@ a {
 .mySlides9 {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     position: absolute;
     top: 0px;
     opacity: 0;
@@ -177,6 +177,11 @@ a {
     -moz-transition: opacity ease 1s;
     -o-transition: opacity ease 1s;
     transition: opacity ease 1s;
+}
+
+/* when a work's description-slide is active, set the slide's overflow to auto */
+.overflow-auto {
+    overflow: auto;
 }
 
 img {
@@ -194,8 +199,8 @@ img {
     line-height: 40px;
     display: none;
     padding-top: 50px;
-
 }
+
 
 .title {
     display: none;
