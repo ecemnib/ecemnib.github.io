@@ -5,17 +5,41 @@
     <meta charset="UTF-8">
     <title>demo</title>
     <meta name=viewport content="width=device-width,initial-scale=1">
+    <link href="loading.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="attempt.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="container colors">
+    <script>
+        window.addEventListener('load', function() {
+                    console.log("loaded");
+                    var loader = document.getElementsByClassName("loading");
+                    loader[0].style.display = "none";
+                    var container = document.getElementsByClassName("container");
+                    container[0].style.opacity = 1;
+                });
+
+    </script>
+
+
+    <div class="loading">
+        <div class="loading-text">
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+        </div>
+    </div>
+    <div class="container colors" onload="loaded()">
         <div id="name" onclick="togglemenu()">
             <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
             <h1 id="menu" class="markpro"><a href="mailto:matteo@bauer-bornemann.de">matteo@bauer-bornemann.de</a>
-            <br>+49 173 8602811</h1>
+                <br>+49 173 8602811</h1>
         </div>
 
         <div id="halo" class="projectWrapper">
@@ -26,44 +50,44 @@
                         <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="1_Halo/1_Halo_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_1.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_1.jpg">
                     </div>
 
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_2.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_2.jpg">
                     </div>
 
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_3.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_3.jpg">
                     </div>
 
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_4.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_4.jpg">
                     </div>
 
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_5.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_5.jpg">
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_6.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_6.jpg">
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_7.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_7.jpg">
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_8.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_8.jpg">
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_9.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_9.jpg">
                     </div>
                     <div class="mySlides1">
-                        <img src="1_Halo/Slideshow/Halo_10.jpg"  >
+                        <img src="1_Halo/Slideshow/Halo_10.jpg">
                     </div>
                     <div class="mySlides1 relativeSlide" data-text-content>
                         <h1 class="pathos title">Halo</h1>
                         <div class="markpro description">Bei Halo handelt es sich um Varianten einer Leuchte, deren Lichtquelle sich im Fuß befindet. Durch eine Anordnung von Linsen wird das Licht gebündelt und nach oben abgestrahlt. An Gelenken befinden sich Spiegel, welche sich mittels einer Mechanik immer winkelhalbierend zu den Armen positionieren. Gemäß dem physikalischen Gesetz, demzufolge der Eintrittswinkel gleich dem Austrittswinkel ist, wird so das Licht in jeder Stellung von einem zum nächsten Spiegel reflektiert. Je nach Konstellation wird nicht immer das gesamte Licht eingefangen, sodass Projektionen in Form einer Aura im Raum entstehen. Das Licht ist hier als Material verstanden, welches geformt und bearbeitet wird. Als integraler Bestandteil des Objekts ordnet sich die Gestaltung diesem unter. Die daraus resultierenden Skulpturen sind visuell nur teilweise wahrnehmbar und werden letztlich imaginär vervollständigt.
-                        <br><br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at lorem purus. Sed egestas eleifend aliquet. Proin tempor euismod mauris, sit amet sollicitudin risus scelerisque vel. Phasellus rhoncus massa non nisl porta, ut laoreet nulla varius. Phasellus elementum tortor diam, ut volutpat ex vehicula id. Integer at ligula non nibh finibus faucibus. Donec dui augue, eleifend vel nulla at, ultricies dignissim ante. Morbi ullamcorper, eros id molestie faucibus, neque augue tristique sapien, quis lacinia orci elit id augue. Nullam at dui dignissim, commodo eros vel, convallis nulla. Morbi fringilla purus vulputate sagittis sollicitudin. Phasellus vel justo ut arcu sollicitudin placerat quis a odio. Sed consequat vulputate tincidunt. Nulla maximus sed est in sodales. Donec sapien nisi, lacinia eget lobortis at, blandit ac risus. In ullamcorper faucibus est, non sollicitudin massa bibendum a.
+                            <br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at lorem purus. Sed egestas eleifend aliquet. Proin tempor euismod mauris, sit amet sollicitudin risus scelerisque vel. Phasellus rhoncus massa non nisl porta, ut laoreet nulla varius. Phasellus elementum tortor diam, ut volutpat ex vehicula id. Integer at ligula non nibh finibus faucibus. Donec dui augue, eleifend vel nulla at, ultricies dignissim ante. Morbi ullamcorper, eros id molestie faucibus, neque augue tristique sapien, quis lacinia orci elit id augue. Nullam at dui dignissim, commodo eros vel, convallis nulla. Morbi fringilla purus vulputate sagittis sollicitudin. Phasellus vel justo ut arcu sollicitudin placerat quis a odio. Sed consequat vulputate tincidunt. Nulla maximus sed est in sodales. Donec sapien nisi, lacinia eget lobortis at, blandit ac risus. In ullamcorper faucibus est, non sollicitudin massa bibendum a.
                         </div>
                         <div class="pathos tags">2018; Stahl, lasergeschnitten, gelötet, geschweißt, gedreht, Cfk-Rohr, Hochglanzpolierter Edelstahl, lackiert, Chemisch Nickel schwarz, High Power Led, Linsen</div>
                     </div>
@@ -86,30 +110,30 @@
                         <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="2_Blubblub/2_Blubblub_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_1.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_1.jpg">
                     </div>
 
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_2.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_2.jpg">
                     </div>
 
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_3.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_3.jpg">
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_4.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_4.jpg">
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_5.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_5.jpg">
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_6.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_6.jpg">
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_7.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_7.jpg">
                     </div>
                     <div class="mySlides2">
-                        <img src="2_Blubblub/Slideshow/Blubblub_8.jpg"  >
+                        <img src="2_Blubblub/Slideshow/Blubblub_8.jpg">
                     </div>
                     <div class="mySlides2 relativeSlide" data-text-content>
                         <h1 class="pathos title">Blubblub</h1>
@@ -135,20 +159,20 @@
                         <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="3_Knautsch/3_Knautsch_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides3">
-                        <img src="3_Knautsch/Slideshow/Knautsch_1.jpg"  >
+                        <img src="3_Knautsch/Slideshow/Knautsch_1.jpg">
                     </div>
 
                     <div class="mySlides3">
-                        <img src="3_Knautsch/Slideshow/Knautsch_2.jpg"  >
+                        <img src="3_Knautsch/Slideshow/Knautsch_2.jpg">
                     </div>
                     <div class="mySlides3">
-                        <img src="3_Knautsch/Slideshow/Knautsch_3.jpg"  >
+                        <img src="3_Knautsch/Slideshow/Knautsch_3.jpg">
                     </div>
                     <div class="mySlides3">
-                        <img src="3_Knautsch/Slideshow/Knautsch_4.jpg"  >
+                        <img src="3_Knautsch/Slideshow/Knautsch_4.jpg">
                     </div>
                     <div class="mySlides3">
-                        <img src="3_Knautsch/Slideshow/Knautsch_5.jpg"  >
+                        <img src="3_Knautsch/Slideshow/Knautsch_5.jpg">
                     </div>
                     <div class="mySlides3 relativeSlide" data-text-content>
                         <h1 class="pathos title">Knautsch</h1>
@@ -174,46 +198,46 @@
                         <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="4_Younit/4_Younit_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_1.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_1.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_2.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_2.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_3.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_3.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_4.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_4.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_5.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_5.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_6.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_6.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_7.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_7.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_8.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_8.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_9.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_9.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_10.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_10.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_11.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_11.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_12.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_12.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_13.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_13.jpg">
                     </div>
                     <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_14.jpg"  >
+                        <img src="4_Younit/Slideshow/Younit_14.jpg">
                     </div>
                     <div class="mySlides4 relativeSlide" data-text-content>
                         <h1 class="pathos title">Younit</h1>
@@ -239,38 +263,38 @@
                         <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="5_Sole/5_Sole_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_1.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_1.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_2.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_2.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_3.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_3.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_4.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_4.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_5.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_5.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_6.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_6.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_7.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_7.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_8.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_8.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_9.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_9.jpg">
                     </div>
                     <div class="mySlides5">
-                        <img src="5_Sole/Slideshow/Sole_10.jpg"  >
+                        <img src="5_Sole/Slideshow/Sole_10.jpg">
                     </div>
                     <div class="mySlides5 relativeSlide" data-text-content>
                         <h1 class="pathos title">Sole</h1>
-                        <div class="markpro description" >Bei Sole handelt es ich um einen Klapptisch der dank eines raffinierten Mechanismus mit nur einem Handgriff in Position gebracht werden kann. Das Besondere dabei ist, dass die Konstruktion keine zusätzliche Fixierung benötigt, da sie sich durch eine spezielle Geometrie selbst stabilisiert. Zusammengeklappt ist der Tisch gerade einmal 2,5 cm dünn und ergibt an die Wand gelehnt ein graphisches Abbild seiner selbst. Bis auf die lasergeschnittenen Bestandteile des Tisches, wurde bewusst auf komplizierte Herstellungsprozesse verzichtet, sodass „Sole“ mit gewöhnlichen Mitteln und gängigen Techniken, im Rahmen einer Manufaktur produziert werden kann.</div>
+                        <div class="markpro description">Bei Sole handelt es ich um einen Klapptisch der dank eines raffinierten Mechanismus mit nur einem Handgriff in Position gebracht werden kann. Das Besondere dabei ist, dass die Konstruktion keine zusätzliche Fixierung benötigt, da sie sich durch eine spezielle Geometrie selbst stabilisiert. Zusammengeklappt ist der Tisch gerade einmal 2,5 cm dünn und ergibt an die Wand gelehnt ein graphisches Abbild seiner selbst. Bis auf die lasergeschnittenen Bestandteile des Tisches, wurde bewusst auf komplizierte Herstellungsprozesse verzichtet, sodass „Sole“ mit gewöhnlichen Mitteln und gängigen Techniken, im Rahmen einer Manufaktur produziert werden kann.</div>
                         <div class="pathos tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
                     </div>
 
@@ -292,31 +316,31 @@
                         <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="6_Minigolf/6_Mini_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_1.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_1.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_2.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_2.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_3.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_3.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_4.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_4.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_5.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_5.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_6.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_6.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_7.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_7.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_8.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_8.jpg">
                     </div>
                     <div class="mySlides6">
-                        <img src="6_Minigolf/Slideshow/123_9.jpg"  >
+                        <img src="6_Minigolf/Slideshow/123_9.jpg">
                     </div>
                     <div class="mySlides6 relativeSlide" data-text-content>
                         <h1 class="pathos title">123</h1>
@@ -342,25 +366,25 @@
                         <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="7_Lastenrad/7_Transit_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_1.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_1.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_2.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_2.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_3.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_3.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_4.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_4.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_5.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_5.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_6.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_6.jpg">
                     </div>
                     <div class="mySlides7">
-                        <img src="7_Lastenrad/Slideshow/Transit_7.jpg"  >
+                        <img src="7_Lastenrad/Slideshow/Transit_7.jpg">
                     </div>
                     <div class="mySlides7" data-text-content>
                         <h1 class="pathos title">Transit</h1>
@@ -386,19 +410,19 @@
                         <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="8_Messer/8_Messer_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides8">
-                        <img src="8_Messer/Slideshow/Messer_1.jpg"  >
+                        <img src="8_Messer/Slideshow/Messer_1.jpg">
                     </div>
                     <div class="mySlides8">
-                        <img src="8_Messer/Slideshow/Messer_2.jpg"  >
+                        <img src="8_Messer/Slideshow/Messer_2.jpg">
                     </div>
                     <div class="mySlides8">
-                        <img src="8_Messer/Slideshow/Messer_3.jpg"  >
+                        <img src="8_Messer/Slideshow/Messer_3.jpg">
                     </div>
                     <div class="mySlides8">
-                        <img src="8_Messer/Slideshow/Messer_4.jpg"  >
+                        <img src="8_Messer/Slideshow/Messer_4.jpg">
                     </div>
                     <div class="mySlides8">
-                        <img src="8_Messer/Slideshow/Messer_5.jpg"  >
+                        <img src="8_Messer/Slideshow/Messer_5.jpg">
                     </div>
                     <div class="mySlides8" data-text-content>
                         <h1 class="pathos title">Messer</h1>
@@ -424,31 +448,31 @@
                         <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted playsinline src="9_Nest/9_Nest_new.mp4">Video not available</video>
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_1.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_1.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_2.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_2.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_3.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_3.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_4.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_4.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_5.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_5.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_6.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_6.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_7.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_7.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_8.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_8.jpg">
                     </div>
                     <div class="mySlides9">
-                        <img src="9_Nest/Slideshow/Nest_9.jpg"  >
+                        <img src="9_Nest/Slideshow/Nest_9.jpg">
                     </div>
 
                     <div class="mySlides9" data-text-content>

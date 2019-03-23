@@ -28,7 +28,12 @@ h6 {
     line-height: 50px;
 }
 
-.content {}
+.content {opacity:0;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    transition: all ease 1s;
+}
 
 .pathos {
     font-family: "Pathos Thin Web", sans-serif;
@@ -240,7 +245,7 @@ img {
     }
 
     #name {
-                padding-left:30px;
+        padding-left:30px;
     }
 
     .pathos {
@@ -291,7 +296,7 @@ img {
     }
 
     #name {
-                padding-left:24px;
+       padding-left:24px;
     }
 
     .pathos {
