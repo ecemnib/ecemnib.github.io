@@ -133,8 +133,10 @@ a {
 .prev,
 .next {
     position: absolute;
-    top: calc(50% - 25px);
+    top: calc(50vh - 125px);
     cursor: pointer;
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 50px;
     text-align: center;
     font-size: 70px;
@@ -245,12 +247,13 @@ img {
     }
 
     .padding {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px;
     }
 
     .padding-sides {
         padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
 
     .description,
@@ -262,7 +265,8 @@ img {
 
     .prev,
     .next {
-
+        font-size: 45px;
+        width: 30px;
     }
 
     h1,
@@ -272,10 +276,6 @@ img {
     h5,
     h6 {
         line-height: 30px;
-    }
-
-    .slideshow {
-        max-height: calc(66vh - 110px);
     }
 
 }
@@ -294,8 +294,7 @@ img {
     }
 
     .padding {
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding: 24px;
     }
 
     .project {}
@@ -309,11 +308,14 @@ img {
 
     .padding-sides {
         padding-top: 24px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
     .prev,
     .next {
-font-size: 70px;
+font-size: 30px;
+        width: 24px;
     }
 
     h1,
@@ -323,10 +325,6 @@ font-size: 70px;
     h5,
     h6 {
         line-height: 24px;
-    }
-
-    .slideshow {
-        max-height: calc(50vh - 98px);
     }
 
 }
