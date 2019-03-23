@@ -44,12 +44,22 @@ function showSlides(n, no) {
     }
 
     for (i = 0; i < numOfSlides; i++) {
-        allSlides[i].className = slideId[no] + " padding";
+        var slide = allSlides[i];
+            slide.classList.remove("showing", "overflow-scroll");
+            slide.classList.add(slideId[no], "padding");
     }
 
-    allSlides[slideIndex[no] - 1].className = slideId[no] + " showing padding";
+    var activeSlide = allSlides[slideIndex[no] - 1];
 
-    var slideshow = allSlides[slideIndex[no] - 1].parentNode;
+    // all slides's overflow is set to hidden by default.
+    // when a description slide becomes active set it's overflow to auto.
+    // data-text-content attribute needs to be set manually to every description slide in html
+    if(activeSlide.hasAttribute("data-text-content")){
+        activeSlide.classList.add("overflow-auto");
+    }
+    activeSlide.classList.add("showing");
+
+    var slideshow = activeSlide.parentNode;
     var parent = slideshow.parentNode;
     console.log(slideshow, parent);
     var index = slideIndex[no];
