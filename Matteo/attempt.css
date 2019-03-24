@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'FFMarkWebProBold';
-    src: url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.ttf');
-    src: url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.woff') format('embedded-opentype'), url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.woff2') format('woff2');
-}
-
-
-
-@font-face {
-    font-family: "Pathos Thin Web";
-    src: url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.eot") format("eot");
-    src: url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.woff") format("woff"),
-        url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.wolf2") format("wolff2");
-}
-
 html,
 body {
     margin: 0;

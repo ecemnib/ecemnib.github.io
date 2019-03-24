@@ -213,5 +213,6 @@ $(".next").hover(function () {
         opacity: 0
     });
 });
-        
+
+
         
