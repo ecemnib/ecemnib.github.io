@@ -1,10 +1,3 @@
-window.addEventListener('load', function() {
-    console.log("loaded");
-    var loader = document.getElementsByClassName("loading");
-    loader[0].style.display = "none";
-    var container = document.getElementsByClassName("container");
-    container[0].style.opacity = 1;
-}
 
 function seekTime(e) {
     var vid = e.explicitOriginalTarget;
@@ -123,4 +116,10 @@ function togglemenu() {
         menu.style.paddingLeft = "0px";
     }
 
+}
+
+function tail(e){
+    var tail = document.getElementById("tail");
+    tail.style.left = e.pageX + 20;
+    tail.style.top = e.pageY;
 }

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <title>demo</title>
     <meta name=viewport content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="loading.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="attempt.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -35,6 +35,8 @@
             <span class="loading-text-words">G</span>
         </div>
     </div>
+    <div id="prevtail" class="pathos colors">01/10</div>
+    <div id="nexttail" class="pathos colors">01/10</div>
     <div class="container colors" onload="loaded()">
         <div id="name" onclick="togglemenu()">
             <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
@@ -86,14 +88,12 @@
                     <div class="mySlides1 relativeSlide" data-text-content>
                         <h1 class="pathos title">Halo</h1>
                         <div class="markpro description">Bei Halo handelt es sich um Varianten einer Leuchte, deren Lichtquelle sich im Fuß befindet. Durch eine Anordnung von Linsen wird das Licht gebündelt und nach oben abgestrahlt. An Gelenken befinden sich Spiegel, welche sich mittels einer Mechanik immer winkelhalbierend zu den Armen positionieren. Gemäß dem physikalischen Gesetz, demzufolge der Eintrittswinkel gleich dem Austrittswinkel ist, wird so das Licht in jeder Stellung von einem zum nächsten Spiegel reflektiert. Je nach Konstellation wird nicht immer das gesamte Licht eingefangen, sodass Projektionen in Form einer Aura im Raum entstehen. Das Licht ist hier als Material verstanden, welches geformt und bearbeitet wird. Als integraler Bestandteil des Objekts ordnet sich die Gestaltung diesem unter. Die daraus resultierenden Skulpturen sind visuell nur teilweise wahrnehmbar und werden letztlich imaginär vervollständigt.
-                            <br><br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at lorem purus. Sed egestas eleifend aliquet. Proin tempor euismod mauris, sit amet sollicitudin risus scelerisque vel. Phasellus rhoncus massa non nisl porta, ut laoreet nulla varius. Phasellus elementum tortor diam, ut volutpat ex vehicula id. Integer at ligula non nibh finibus faucibus. Donec dui augue, eleifend vel nulla at, ultricies dignissim ante. Morbi ullamcorper, eros id molestie faucibus, neque augue tristique sapien, quis lacinia orci elit id augue. Nullam at dui dignissim, commodo eros vel, convallis nulla. Morbi fringilla purus vulputate sagittis sollicitudin. Phasellus vel justo ut arcu sollicitudin placerat quis a odio. Sed consequat vulputate tincidunt. Nulla maximus sed est in sodales. Donec sapien nisi, lacinia eget lobortis at, blandit ac risus. In ullamcorper faucibus est, non sollicitudin massa bibendum a.
                         </div>
                         <div class="pathos tags">2018; Stahl, lasergeschnitten, gelötet, geschweißt, gedreht, Cfk-Rohr, Hochglanzpolierter Edelstahl, lackiert, Chemisch Nickel schwarz, High Power Led, Linsen</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 0)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 0)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(0)" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(0)" onclick="plusSlides(1, 0)">&#10095;</a>
                 </div>
 
             </div>
@@ -141,8 +141,8 @@
                         <div class="pathos tags">2015; Aluminium, Acrylglas, PVC, Ir-LEDs, Raspberry Pi, NoIR Infrared Camera</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 1)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 1)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(1)" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(1)" onclick="plusSlides(1, 1)">&#10095;</a>
                 </div>
 
             </div>
@@ -180,8 +180,8 @@
                         <div class="pathos tags">2015 — 16</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 2)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 2)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(2)" onclick="plusSlides(-1, 2)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(2)" onclick="plusSlides(1, 2)">&#10095;</a>
                 </div>
 
             </div>
@@ -245,8 +245,8 @@
                         <div class="pathos tags">2016; Stahl, Alu, Drahtglas, Corian, OSB, Marmor, Kalkstein, Sperrholz, Acrylglas, Spanplatte, Kupfer, wasserstrahlgeschnitten</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 3)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 3)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(3)" onclick="plusSlides(-1, 3)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(3)" onclick="plusSlides(1, 3)">&#10095;</a>
                 </div>
 
             </div>
@@ -298,8 +298,8 @@
                         <div class="pathos tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 4)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 4)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(4)" onclick="plusSlides(-1, 4)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(4)" onclick="plusSlides(1, 4)">&#10095;</a>
                 </div>
 
             </div>
@@ -348,8 +348,8 @@
                         <div class="pathos tags">2015; MDF, CNC-gefräst, lackiert, Aluminium</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 5)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 5)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(5)" onclick="plusSlides(-1, 5)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(5)" onclick="plusSlides(1, 5)">&#10095;</a>
                 </div>
 
             </div>
@@ -392,8 +392,8 @@
                         <div class="pathos tags">2013 — 2014; verschiedene Materialien</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 6)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 6)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(6)" onclick="plusSlides(-1, 6)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(6)" onclick="plusSlides(1, 6)">&#10095;</a>
                 </div>
 
             </div>
@@ -430,8 +430,8 @@
                         <div class="pathos tags">2016; HSS Stahl (Sägeblatt), wasserstrahlgeschnitten, Corian, Ebenholz, Ahorn, Eibe</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 7)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 7)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(7)" onclick="plusSlides(-1, 7)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(7)" onclick="plusSlides(1, 7)">&#10095;</a>
                 </div>
 
             </div>
@@ -481,8 +481,8 @@
                         <div class="pathos tags">2012 — 2014; Aluminium, Stahl, wasserstrahlgeschnitten, verkeilt, glasperlgestrahlt, verzundert, brüniert</div>
                     </div>
 
-                    <a class="prev pathos" onclick="plusSlides(-1, 8)">&#10094;</a>
-                    <a class="next pathos" onclick="plusSlides(1, 8)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(8)" onclick="plusSlides(-1, 8)">&#10094;</a>
+                    <a class="next pathos" onmouseover="showTails(8)" onclick="plusSlides(1, 8)">&#10095;</a>
                 </div>
 
             </div>

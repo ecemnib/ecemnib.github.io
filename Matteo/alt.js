@@ -27,6 +27,41 @@ function plusSlides(n, no) {
     showSlides(slideIndex[no] += n, no);
 }
 
+function showTails(no) {
+    
+    var i;
+
+    var allSlides = document.getElementsByClassName(slideId[no]);
+
+    var numOfSlides = allSlides.length;
+
+    var activeSlide = allSlides[slideIndex[no] - 1];
+
+    var slideshow = activeSlide.parentNode;
+    var parent = slideshow.parentNode;
+    var index = slideIndex[no];
+    var prev = parent.getElementsByClassName("prev");
+    var next = parent.getElementsByClassName("next");
+    var prevtail = document.getElementById("prevtail");
+    var nexttail = document.getElementById("nexttail");
+    var prevnum;
+    var nextnum;
+
+    prevnum = pad((index - 1), 2);
+    nextnum = pad((index + 1), 2);
+    
+    prevtail.innerHTML = pad(prevnum, 2) + "/" + pad(numOfSlides, 2);
+    nexttail.innerHTML = pad(nextnum, 2) + "/" + pad(numOfSlides, 2);
+
+    if (index == 1) {
+        prevtail.innerHTML = "";
+    }
+    if (index == numOfSlides) {
+        prevtail.innerHTML = "";
+        nexttail.innerHTML = "";
+    }
+}
+
 function showSlides(n, no) {
 
     var i;
@@ -45,8 +80,8 @@ function showSlides(n, no) {
 
     for (i = 0; i < numOfSlides; i++) {
         var slide = allSlides[i];
-            slide.classList.remove("showing");
-            slide.classList.add(slideId[no], "padding");
+        slide.classList.remove("showing");
+        slide.classList.add(slideId[no], "padding");
     }
 
     var activeSlide = allSlides[slideIndex[no] - 1];
@@ -62,21 +97,27 @@ function showSlides(n, no) {
 
     var prev = parent.getElementsByClassName("prev");
     var next = parent.getElementsByClassName("next");
+    var prevtail = document.getElementById("prevtail");
+    var nexttail = document.getElementById("nexttail");
     var prevnum;
     var nextnum;
 
     prevnum = pad((index - 1), 2);
     nextnum = pad((index + 1), 2);
-    
+
     prev[0].style.visibility = "visible";
     next[0].style.visibility = "visible";
+    
+    prevtail.innerHTML = pad(prevnum, 2) + "/" + pad(numOfSlides, 2);
+    nexttail.innerHTML = pad(nextnum, 2) + "/" + pad(numOfSlides, 2);
 
     if (index == 1) {
-        prevnum = pad(numOfSlides, 2);
+        prevtail.innerHTML = "";
         prev[0].style.visibility = "hidden";
     }
     if (index == numOfSlides) {
-        nextnum = pad(1, 2);
+        prevtail.innerHTML = "";
+        nexttail.innerHTML = "";
         document.getElementById(no + 1).style.visibility = "hidden";
         document.getElementById(no + 1).style.display = "none";
         next[0].style.visibility = "hidden";
@@ -84,9 +125,6 @@ function showSlides(n, no) {
         document.getElementById(no + 1).style.visibility = "visible";
         document.getElementById(no + 1).style.display = "block";
     }
-    /*
-    prev[0].innerHTML = "< " + prevnum + "/" + pad(numOfSlides, 2);
-    next[0].innerHTML = nextnum + "/" + pad(numOfSlides, 2) + " >";*/
 }
 
 function pad(n, width, z) {
@@ -116,9 +154,9 @@ function togglemenu() {
     var div = document.getElementById("name");
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
-    
+
     var state = menu.style.opacity;
-    
+
     if (state == 0) {
         name.innerHTML = "Kontakt";
         div.style.color = "#fff";
@@ -134,3 +172,46 @@ function togglemenu() {
     }
 
 }
+
+$(document).bind('mousemove', function (e) {
+    
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var prevtail = document.getElementById("prevtail");
+    var nexttail = document.getElementById("nexttail");
+    
+    $('#prevtail').css({
+        left: (e.pageX + w/4) - prevtail.clientWidth/2,
+        top: e.pageY - prevtail.clientHeight/2
+    });
+    $('#nexttail').css({
+        left: (e.pageX - w/4) - nexttail.clientWidth/2,
+        top: e.pageY - nexttail.clientHeight/2
+    });
+});
+
+
+
+$(".prev").hover(function () {
+    $("#prevtail").css({
+        opacity: 1
+    });
+},
+                 function(){
+    $("#prevtail").css({
+        opacity: 0
+    });
+});
+
+$(".next").hover(function () {
+    $("#nexttail").css({
+        opacity: 1
+    });
+},
+   function(){
+    $("#nexttail").css({
+        opacity: 0
+    });
+});
+        
+        
