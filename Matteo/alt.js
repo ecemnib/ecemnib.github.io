@@ -180,14 +180,14 @@ $(document).bind('mousemove', function (e) {
     var prevtail = document.getElementById("prevtail");
     var nexttail = document.getElementById("nexttail");
     
-    $('#prevtail').css({
+    $('#prevtail').animate({
         left: (e.pageX + w/4) - prevtail.clientWidth/2,
         top: e.pageY - prevtail.clientHeight/2
-    });
-    $('#nexttail').css({
+    }, 15);
+    $('#nexttail').animate({
         left: (e.pageX - w/4) - nexttail.clientWidth/2,
         top: e.pageY - nexttail.clientHeight/2
-    });
+    }, 15);
 });
 
 

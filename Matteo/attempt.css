@@ -244,10 +244,10 @@ img {
     float: left;
     z-index: 5;
     opacity: 0;
-    -webkit-transition: opacity ease 0.5s;
-    -moz-transition: opacity ease 0.5s;
-    -o-transition: opacity ease 0.5s;
-    transition: opacity ease 0.5s;
+    -webkit-transition: opacity ease 0.3s;
+    -moz-transition: opacity ease 0.3s;
+    -o-transition: opacity ease 0.3s;
+    transition: opacity ease 0.3s;
 }
 
 @media only screen and (max-width: 660px) {
