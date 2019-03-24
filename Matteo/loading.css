@@ -24,49 +24,49 @@
   display: inline-block;
   margin: 0 5px;
   color: #2e2382;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: sans-serif;
 }
 .loading-text span:nth-child(1) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
-          animation: blur-text 1.5s 0s infinite linear alternate;
+  -webkit-animation: blur-text 1s 0s infinite linear alternate;
+          animation: blur-text 1s 0s infinite linear alternate;
 }
 .loading-text span:nth-child(2) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
-          animation: blur-text 1.5s 0.2s infinite linear alternate;
+  -webkit-animation: blur-text 1s 0.2s infinite linear alternate;
+          animation: blur-text 1s 0.2s infinite linear alternate;
 }
 .loading-text span:nth-child(3) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
-          animation: blur-text 1.5s 0.4s infinite linear alternate;
+  -webkit-animation: blur-text 1s 0.4s infinite linear alternate;
+          animation: blur-text 1s 0.4s infinite linear alternate;
 }
 .loading-text span:nth-child(4) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
-          animation: blur-text 1.5s 0.6s infinite linear alternate;
+  -webkit-animation: blur-text 1s 0.6s infinite linear alternate;
+          animation: blur-text 1s 0.6s infinite linear alternate;
 }
 .loading-text span:nth-child(5) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
-          animation: blur-text 1.5s 0.8s infinite linear alternate;
+  -webkit-animation: blur-text 1s 0.8s infinite linear alternate;
+          animation: blur-text 1s 0.8s infinite linear alternate;
 }
 .loading-text span:nth-child(6) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
-          animation: blur-text 1.5s 1s infinite linear alternate;
+  -webkit-animation: blur-text 1s 1s infinite linear alternate;
+          animation: blur-text 1s 1s infinite linear alternate;
 }
 .loading-text span:nth-child(7) {
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
-          animation: blur-text 1.5s 1.2s infinite linear alternate;
+  -webkit-animation: blur-text 1s 1.2s infinite linear alternate;
+          animation: blur-text 1s 1.2s infinite linear alternate;
 }
 
 @-webkit-keyframes blur-text {
@@ -75,8 +75,8 @@
             filter: blur(0px);
   }
   100% {
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
+    -webkit-filter: blur(16px);
+            filter: blur(16px);
   }
 }
 
@@ -86,7 +86,7 @@
             filter: blur(0px);
   }
   100% {
-    -webkit-filter: blur(4px);
-            filter: blur(4px);
+    -webkit-filter: blur(16px);
+            filter: blur(16px);
   }
 }
