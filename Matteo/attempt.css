@@ -54,7 +54,7 @@ h6 {
     border-color: #2e2382;
     text-transform: uppercase;
     padding-bottom: 3px;
-    z-index: 6;
+    z-index: 20;
     -webkit-transition: all ease 0.2s;
     -moz-transition: all ease 0.2s;
     -o-transition: all ease 0.2s;
@@ -73,6 +73,7 @@ h6 {
     opacity: 0;
     padding: 0px;
     margin: 0px;
+    z-index: 20;
     -webkit-transition: height cubic-bezier(.53, .01, .37, 1.19) 0.5s;
     -moz-transition: height cubic-bezier(.53, .01, .37, 1.19) 0.5s;
     -o-transition: height cubic-bezier(.53, .01, .37, 1.19) 0.5s;

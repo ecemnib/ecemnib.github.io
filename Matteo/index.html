@@ -3,397 +3,528 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Matteo</title>
+    <title>Matteo-Bauer-Bornemann</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="icon" href="Icons/Favicon.png">
     <meta name=viewport content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="halo.css" rel="stylesheet">
-
+    <link href="attempt.css" rel="stylesheet">
+    <link rel="preload" href="Icons/arrow_left.png" as="image">
+    <link rel="preload" href="Icons/arrow_right.png" as="image">
 </head>
 
+<body>
+    <style>
+        @font-face {
+    font-family: 'FFMarkWebProBold';
+    src: url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.ttf');
+    src: url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.woff') format('embedded-opentype'), url('Fonts/Mark_Pro_Bold_WEB/webfonts/386FC1_0_0.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Pathos Thin Web";
+    src: url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.eot") format("eot");
+    src: url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.woff") format("woff"),
+        url("Fonts/Pathos_Thin_WEB/Pathos%20Thin.wolf2") format("wolff2");
+}
+    </style>
+    <script>
+        /*window.addEventListener('load', function() {
+                    console.log("loaded");
+                    var loader = document.getElementsByClassName("loading");
+                    loader[0].style.display = "none";
+                    var container = document.getElementsByClassName("container");
+                    container[0].style.opacity = 1;
+                });*/
+        
+        setTimeout(function() {
+                    console.log("timeout");
+                    var loader = document.getElementsByClassName("loading");
+                    loader[0].style.display = "none";
+                    var container = document.getElementsByClassName("container");
+                    container[0].style.opacity = 1;
+                },3000);
+
+    </script>
 
 
-<body class="container colors">
-    <div id="name" onclick="togglemenu()">
-        <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
-        <ol id="menu" class="">
-            <li><a href="#halo">Halo</a></li>
-            <li><a href="#blubblub">Blubblub</a></li>
-            <li><a href="#knautsch">Knautsch</a></li>
-            <li><a href="#younit">Younit</a></li>
-            <li><a href="#sole">Sole</a></li>
-            <li><a href="#123">123</a></li>
-            <li><a href="#transit">Transit</a></li>
-            <li><a href="#messer">Messer</a></li>
-            <li><a href="#nest">Nest</a></li>
-        </ol>
+    <div class="loading">
+        <div class="loader">
+        
     </div>
-    <div id="halo" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Halo</h1>
-        <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="1_Halo/_Halo.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_1.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_2.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_3.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_4.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_9.jpg" style="width:100%">
-                </div>
-                <div class="mySlides1">
-                    <img src="1_Halo/Slideshow/Halo_10.jpg" style="width:100%">
-                </div>
-
-                <a class="prev pathos" onclick="plusSlides(-1, 0)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 0)">&#10095;</a>
-            </div>
-            <div class="markpro padding-sides description">Bei Halo handelt es sich um Varianten einer Leuchte, deren Lichtquelle sich im Fuß befindet. Durch eine Anordnung von Linsen wird das Licht gebündelt und nach oben abgestrahlt. An Gelenken befinden sich Spiegel, welche sich mittels einer Mechanik immer winkelhalbierend zu den Armen positionieren. Gemäß dem physikalischen Gesetz, demzufolge der Eintrittswinkel gleich dem Austrittswinkel ist, wird so das Licht in jeder Stellung von einem zum nächsten Spiegel reflektiert. Je nach Konstellation wird nicht immer das gesamte Licht eingefangen, sodass Projektionen in Form einer Aura im Raum entstehen. Das Licht ist hier als Material verstanden, welches geformt und bearbeitet wird. Als integraler Bestandteil des Objekts ordnet sich die Gestaltung diesem unter. Die daraus resultierenden Skulpturen sind visuell nur teilweise wahrnehmbar und werden letztlich imaginär vervollständigt.</div>
-            <div class="pathos padding tags">2018; Stahl, lasergeschnitten, gelötet, geschweißt, gedreht, Cfk-Rohr, Hochglanzpolierter Edelstahl, lackiert, Chemisch Nickel schwarz, High Power Led, Linsen</div>
+    </div>
+    <div id="prevtail" class="pathos colors">01/10</div>
+    <div id="nexttail" class="pathos colors">01/10</div>
+    <div class="container colors" onload="loaded()">
+        <div id="name" onclick="togglemenu()">
+            <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
+            <h1 id="menu" class="markpro"><br>
+                <a class="link" href="https://www.instagram.com/matteo_bauer_bornemann/" >Insta</a>
+                <a class="pathos detail" href="https://www.instagram.com/matteo_bauer_bornemann/">matteo_bauer_bornemann</a>
+                <br>
+                <a class="link" href="mailto:matteo@bauer-bornemann.de">E-mail</a>
+                <a href="mailto:matteo@bauer-bornemann.de" class="pathos detail">matteo@bauer-bornemann.de</a>
+                <br>
+                <a class="link" href="tel:+4917640206387">Phone</a>
+                <a href="tel:+4917640206387" class="pathos detail">+49 17 640206387</a>
+                <br>
+                <a class="copywrite pathos">&#169; 2019 Design: Matteo Bauer-Bornemann; Graphics: Lena Windisch; Code: Jorim Theuns</a>
+                </h1>
         </div>
-    </div>
 
-    <div id="blubblub" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Blubblub</h1>
-        <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="2_Blubblub/_Blubblub.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_1.jpg" style="width:100%">
+        <div id="halo" class="projectWrapper">
+            <h1 id="1" class="pathos padding sticky overlay">Halo</h1>
+            <div class="project">
+                <div class="slideshow">
+                    <div class="mySlides1">
+                        <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline preload loop mute onplaying="this.controls=false" src="1_Halo/1_Halo_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_1.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_2.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_3.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_4.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_5.jpg">
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_6.jpg">
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_7.jpg">
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_8.jpg">
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_9.jpg">
+                    </div>
+                    <div class="mySlides1">
+                        <img src="1_Halo/Slideshow/Halo_10.jpg">
+                    </div>
+                    <div class="mySlides1 relativeSlide" data-text-content>
+                        <h1 class="pathos title">Halo</h1>
+                        <div class="markpro description">Bei Halo handelt es sich um Varianten einer Leuchte, deren Lichtquelle sich im Fuß befindet. Durch eine Anordnung von Linsen wird das Licht gebündelt und nach oben abgestrahlt. An Gelenken befinden sich Spiegel, welche sich mittels einer Mechanik immer winkelhalbierend zu den Armen positionieren. Gemäß dem physikalischen Gesetz, demzufolge der Eintrittswinkel gleich dem Austrittswinkel ist, wird so das Licht in jeder Stellung von einem zum nächsten Spiegel reflektiert. Je nach Konstellation wird nicht immer das gesamte Licht eingefangen, sodass Projektionen in Form einer Aura im Raum entstehen. Das Licht ist hier als Material verstanden, welches geformt und bearbeitet wird. Als integraler Bestandteil des Objekts ordnet sich die Gestaltung diesem unter. Die daraus resultierenden Skulpturen sind visuell nur teilweise wahrnehmbar und werden letztlich imaginär vervollständigt.
+                        </div>
+                        <div class="pathos tags">2018; Stahl, lasergeschnitten, gelötet, geschweißt, gedreht, Cfk-Rohr, Hochglanzpolierter Edelstahl, lackiert, Chemisch Nickel schwarz, High Power Led, Linsen</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(0)" onclick="plusSlides(-1, 0)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(0)" onclick="plusSlides(1, 0)"><img  class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_2.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides2">
-                    <img src="2_Blubblub/Slideshow/Blubblub_8.jpg" style="width:100%">
-                </div>
-
-                <a class="prev pathos" onclick="plusSlides(-1, 1)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Bei diesem Projekt handelt es sich um ein Gerät, welches eine Schnittstelle zwischen Mensch und Computer bilden soll. Mit ihm können durch Intuitive Eingabe virtuelle Körper erzeugt werden. Die Art der Eingabe orientiert sich dabei an handwerklichen Vorgehensweisen, ist also auf manueller Fertigkeit beruhend. Das Gerät nimmt ähnlich wie ein Touchscreen, allerdings wesentlich detaillierter die Berührungspunkte der Hand auf einer Fläche ab. Die Silhouetten der Abdrücke werden vom Rechner kontinuierlich übereinander geschichtet und anschließend zu einem dreidimensionalem Körper zusammen gesetzt. Das ganze geschieht beinahe in Echtzeit. Vom Benutzer soll der anfängliche Gebrauch keine speziellen Kenntnis erfordern. Der Erwerb weitere Fähigkeiten ergibt sich alleine aus dem Lernprozess, der aus der Anwendung resultiert, also kognitiv ist.</div>
-            <div class="pathos padding tags">2015; Aluminium, Acrylglas, PVC, Ir-LEDs, Raspberry Pi, NoIR Infrared Camera</div>
         </div>
-    </div>
 
-    <div id="knautsch" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Knautsch</h1>
-        <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="3_Knautsch/_Knautsch.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides3">
-                    <img src="3_Knautsch/Slideshow/Knautsch_1.jpg" style="width:100%">
+        <br>
+
+        <div id="blubblub" class="projectWrapper">
+            <h1 id="2" class="pathos padding sticky overlay">Blubblub</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides2">
+                        <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline preload loop mute onplaying="this.controls=false" src="2_Blubblub/2_Blubblub_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_1.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_2.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_3.jpg">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_4.jpg">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_5.jpg">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_6.jpg">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_7.jpg">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="2_Blubblub/Slideshow/Blubblub_8.jpg">
+                    </div>
+                    <div class="mySlides2 relativeSlide" data-text-content>
+                        <h1 class="pathos title">Blubblub</h1>
+                        <div class="markpro description">Bei diesem Projekt handelt es sich um ein Gerät, welches eine Schnittstelle zwischen Mensch und Computer bilden soll. Mit ihm können durch Intuitive Eingabe virtuelle Körper erzeugt werden. Die Art der Eingabe orientiert sich dabei an handwerklichen Vorgehensweisen, ist also auf manueller Fertigkeit beruhend. Das Gerät nimmt ähnlich wie ein Touchscreen, allerdings wesentlich detaillierter die Berührungspunkte der Hand auf einer Fläche ab. Die Silhouetten der Abdrücke werden vom Rechner kontinuierlich übereinander geschichtet und anschließend zu einem dreidimensionalem Körper zusammen gesetzt. Das ganze geschieht beinahe in Echtzeit. Vom Benutzer soll der anfängliche Gebrauch keine speziellen Kenntnis erfordern. Der Erwerb weitere Fähigkeiten ergibt sich alleine aus dem Lernprozess, der aus der Anwendung resultiert, also kognitiv ist.</div>
+                        <div class="pathos tags">2015; Aluminium, Acrylglas, PVC, Ir-LEDs, Raspberry Pi, NoIR Infrared Camera</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(1)" onclick="plusSlides(-1, 1)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(1)" onclick="plusSlides(1, 1)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <div class="mySlides3">
-                    <img src="3_Knautsch/Slideshow/Knautsch_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides3">
-                    <img src="3_Knautsch/Slideshow/Knautsch_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides3">
-                    <img src="3_Knautsch/Slideshow/Knautsch_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides3">
-                    <img src="3_Knautsch/Slideshow/Knautsch_5.jpg" style="width:100%">
-                </div>
-
-                <a class="prev pathos" onclick="plusSlides(-1, 2)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 2)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Konzeptuelle Alternative von Antrieb und Geometrie einer etablierten Fahrradtechnik</div>
-            <div class="pathos padding tags">2015 — 16</div>
         </div>
-    </div>
 
-    <div id="younit" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Younit</h1>
-        <div class="project">
-            <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline loop muted src="4_Younit/_Younit.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_9.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_10.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_11.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_12.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_13.jpg" style="width:100%">
-                </div>
-                <div class="mySlides4">
-                    <img src="4_Younit/Slideshow/Younit_14.jpg" style="width:100%">
+        <br>
+
+        <div id="knautsch" class="projectWrapper">
+            <h1 id="3" class="pathos padding sticky overlay">Knautsch</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides3">
+                        <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline preload loop mute onplaying="this.controls=false" src="3_Knautsch/3_Knautsch_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides3">
+                        <img src="3_Knautsch/Slideshow/Knautsch_1.jpg">
+                    </div>
+
+                    <div class="mySlides3">
+                        <img src="3_Knautsch/Slideshow/Knautsch_2.jpg">
+                    </div>
+                    <div class="mySlides3">
+                        <img src="3_Knautsch/Slideshow/Knautsch_3.jpg">
+                    </div>
+                    <div class="mySlides3">
+                        <img src="3_Knautsch/Slideshow/Knautsch_4.jpg">
+                    </div>
+                    <div class="mySlides3">
+                        <img src="3_Knautsch/Slideshow/Knautsch_5.jpg">
+                    </div>
+                    <div class="mySlides3 relativeSlide" data-text-content>
+                        <h1 class="pathos title">Knautsch</h1>
+                        <div class="markpro description">Konzeptuelle Alternative von Antrieb und Geometrie einer etablierten Fahrradtechnik</div>
+                        <div class="pathos tags">2015 — 16</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(2)" onclick="plusSlides(-1, 2)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(2)" onclick="plusSlides(1, 2)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 3)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 3)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">„Younit“ stellt einen experimentellen Ansatz zum Gebrauch ungenutzter Ressourcen dar. Exemplarisch handelt es sich bei der Umsetzung um Stühle, deren Einzelteile aus Resten, die beim Zuschnitt von Plattenmaterial entstehen, bezogen werden. Die Konstruktion der Stühle ist so angelegt, dass sie universell anwendbar ist und mit einem geringen Maß an Vorkenntnissen und Hilfsmitteln, selbstständig zu realisieren ist. Durch die Verwendung unterschiedlicher Materialien, entsteht eine unerschöpfliche Vielfalt an möglichen Variationen, was dazu führt, dass jedes Objekt eine ganz eigene Ästhetik aufweist. Diese zeichnet sich durch die extremen Kombinationen der verschiedenen Stoffe aus, welche mit den unterschiedlichsten und auch gegensätzlichsten Assoziationen belegt sind. Dies soll bewusst polarisieren und die qualitative und monetäre Wertschätzung, die an die verschiedenen Materialien geknüpft sind, in Frage stellen.</div>
-            <div class="pathos padding tags">2016; Stahl, Alu, Drahtglas, Corian, OSB, Marmor, Kalkstein, Sperrholz, Acrylglas, Spanplatte, Kupfer, wasserstrahlgeschnitten</div>
         </div>
-    </div>
 
-    <div id="sole" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Sole</h1>
-        <div class="project">
-            <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="5_Sole/_Sole.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_9.jpg" style="width:100%">
-                </div>
-                <div class="mySlides5">
-                    <img src="5_Sole/Slideshow/Sole_10.jpg" style="width:100%">
+        <br>
+
+        <div id="younit" class="projectWrapper">
+            <h1 id="4" class="pathos padding sticky overlay">Younit</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides4 ">
+                        <video class="video" onmouseover="play()" onmouseout="pause()" autoplay playsinline preload loop mute onplaying="this.controls=false" src="4_Younit/4_Younit_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_1.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_2.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_3.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_4.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_5.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_6.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_7.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_8.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_9.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_10.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_11.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_12.jpg">
+                    </div>
+                    <div class="mySlides4">
+                        <img src="4_Younit/Slideshow/Younit_13.jpg">
+                    </div>
+                    <div class="mySlides4 relativeSlide" data-text-content>
+                        <h1 class="pathos title">Younit</h1>
+                        <div class="markpro description">„Younit“ stellt einen experimentellen Ansatz zum Gebrauch ungenutzter Ressourcen dar. Exemplarisch handelt es sich bei der Umsetzung um Stühle, deren Einzelteile aus Resten, die beim Zuschnitt von Plattenmaterial entstehen, bezogen werden. Die Konstruktion der Stühle ist so angelegt, dass sie universell anwendbar ist und mit einem geringen Maß an Vorkenntnissen und Hilfsmitteln, selbstständig zu realisieren ist. Durch die Verwendung unterschiedlicher Materialien, entsteht eine unerschöpfliche Vielfalt an möglichen Variationen, was dazu führt, dass jedes Objekt eine ganz eigene Ästhetik aufweist. Diese zeichnet sich durch die extremen Kombinationen der verschiedenen Stoffe aus, welche mit den unterschiedlichsten und auch gegensätzlichsten Assoziationen belegt sind. Dies soll bewusst polarisieren und die qualitative und monetäre Wertschätzung, die an die verschiedenen Materialien geknüpft sind, in Frage stellen.</div>
+                        <div class="pathos tags">2016; Stahl, Alu, Drahtglas, Corian, OSB, Marmor, Kalkstein, Sperrholz, Acrylglas, Spanplatte, Kupfer, wasserstrahlgeschnitten</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(3)" onclick="plusSlides(-1, 3)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(3)" onclick="plusSlides(1, 3)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 4)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 4)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Bei Sole handelt es ich um einen Klapptisch der dank eines raffinierten Mechanismus mit nur einem Handgriff in Position gebracht werden kann. Das Besondere dabei ist, dass die Konstruktion keine zusätzliche Fixierung benötigt, da sie sich durch eine spezielle Geometrie selbst stabilisiert. Zusammengeklappt ist der Tisch gerade einmal 2,5 cm dünn und ergibt an die Wand gelehnt ein graphisches Abbild seiner selbst. Bis auf die lasergeschnittenen Bestandteile des Tisches, wurde bewusst auf komplizierte Herstellungsprozesse verzichtet, sodass „Sole“ mit gewöhnlichen Mitteln und gängigen Techniken, im Rahmen einer Manufaktur produziert werden kann.</div>
-            <div class="pathos padding tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
         </div>
-    </div>
 
-    <div id="123" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">123</h1>
-        <div class="project">
-            <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="6_Minigolf/_Minigolf.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides6">
-                    <img src="6_Minigolf/Slideshow/123_9.jpg" style="width:100%">
+        <br>
+
+        <div id="sole" class="projectWrapper">
+            <h1 id="5" class="pathos padding sticky overlay">Sole</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides5">
+                        <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" preload loop mute onplaying="this.controls=false" src="5_Sole/5_Sole_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_1.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_2.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_3.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_4.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_5.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_6.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_7.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_8.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_9.jpg">
+                    </div>
+                    <div class="mySlides5">
+                        <img src="5_Sole/Slideshow/Sole_10.jpg">
+                    </div>
+                    <div class="mySlides5 relativeSlide" data-text-content>
+                        <h1 class="pathos title">Sole</h1>
+                        <div class="markpro description">Bei Sole handelt es ich um einen Klapptisch der dank eines raffinierten Mechanismus mit nur einem Handgriff in Position gebracht werden kann. Das Besondere dabei ist, dass die Konstruktion keine zusätzliche Fixierung benötigt, da sie sich durch eine spezielle Geometrie selbst stabilisiert. Zusammengeklappt ist der Tisch gerade einmal 2,5 cm dünn und ergibt an die Wand gelehnt ein graphisches Abbild seiner selbst. Bis auf die lasergeschnittenen Bestandteile des Tisches, wurde bewusst auf komplizierte Herstellungsprozesse verzichtet, sodass „Sole“ mit gewöhnlichen Mitteln und gängigen Techniken, im Rahmen einer Manufaktur produziert werden kann.</div>
+                        <div class="pathos tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(4)" onclick="plusSlides(-1, 4)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(4)" onclick="plusSlides(1, 4)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 5)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 5)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Als Inspiration dienten klassische Minigolfbahnen die in ihrem gewohnten Terrain häufig mit einem eigenwilligen Charme bestechen. Diese formalen Qualitäten wurden in einen neuen Kontext gesetzt und auf das Type Design übertragen. Ziel war es Normvorstellungen in Bezug auf Schriftgestaltung zu überwinden und spannende dreidimensionale Objekte zu erzeugen. Die typografischen Minigolfbahnen sind interaktive Designobjekte die zur Teilnahme auffordern. Diese Form von Typografie im Raum ist als humorvoller, spielerischer Kommentar zur konventionellen Schriftgestaltung zu verstehen.</div>
-            <div class="pathos padding tags">2015; MDF, CNC-gefräst, lackiert, Aluminium</div>
         </div>
-    </div>
 
-    <div id="transit" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Transit</h1>
-        <div class="project">
-            <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="7_Lastenrad/_Lastenrad.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides7">
-                    <img src="7_Lastenrad/Slideshow/Transit_7.jpg" style="width:100%">
+        <br>
+
+        <div id="123" class="projectWrapper">
+            <h1 id="6" class="pathos padding sticky overlay">123</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides6">
+                        <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" preload loop mute onplaying="this.controls=false" src="6_Minigolf/6_Mini_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_1.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_2.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_3.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_4.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_5.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_6.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_7.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_8.jpg">
+                    </div>
+                    <div class="mySlides6">
+                        <img src="6_Minigolf/Slideshow/123_9.jpg">
+                    </div>
+                    <div class="mySlides6 relativeSlide" data-text-content>
+                        <h1 class="pathos title">123</h1>
+                        <div class="markpro description">Als Inspiration dienten klassische Minigolfbahnen die in ihrem gewohnten Terrain häufig mit einem eigenwilligen Charme bestechen. Diese formalen Qualitäten wurden in einen neuen Kontext gesetzt und auf das Type Design übertragen. Ziel war es Normvorstellungen in Bezug auf Schriftgestaltung zu überwinden und spannende dreidimensionale Objekte zu erzeugen. Die typografischen Minigolfbahnen sind interaktive Designobjekte die zur Teilnahme auffordern. Diese Form von Typografie im Raum ist als humorvoller, spielerischer Kommentar zur konventionellen Schriftgestaltung zu verstehen.</div>
+                        <div class="pathos tags">2015; MDF, CNC-gefräst, lackiert, Aluminium</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(5)" onclick="plusSlides(-1, 5)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(5)" onclick="plusSlides(1, 5)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 6)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 6)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">—</div>
-            <div class="pathos padding tags">2013 — 2014; verschiedene Materialien</div>
         </div>
-    </div>
 
-    <div id="messer" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Messer</h1>
-        <div class="project">
-            <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" loop muted src="8_Messer/_Messer.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides8">
-                    <img src="8_Messer/Slideshow/Messer_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides8">
-                    <img src="8_Messer/Slideshow/Messer_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides8">
-                    <img src="8_Messer/Slideshow/Messer_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides8">
-                    <img src="8_Messer/Slideshow/Messer_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides8">
-                    <img src="8_Messer/Slideshow/Messer_5.jpg" style="width:100%">
+        <br>
+
+        <div id="transit" class="projectWrapper">
+            <h1 id="7" class="pathos padding sticky overlay">Transit</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides7">
+                        <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" preload loop mute onplaying="this.controls=false" src="7_Lastenrad/7_Transit_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_1.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_2.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_3.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_4.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_5.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_6.jpg">
+                    </div>
+                    <div class="mySlides7">
+                        <img src="7_Lastenrad/Slideshow/Transit_7.jpg">
+                    </div>
+                    <div class="mySlides7" data-text-content>
+                        <h1 class="pathos title">Transit</h1>
+                        <div class="markpro description">—</div>
+                        <div class="pathos tags">2013 — 2014; verschiedene Materialien</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(6)" onclick="plusSlides(-1, 6)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(6)" onclick="plusSlides(1, 6)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 7)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 7)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">—</div>
-            <div class="pathos padding tags">2016; HSS Stahl (Sägeblatt), wasserstrahlgeschnitten, Corian, Ebenholz, Ahorn, Eibe</div>
         </div>
-    </div>
 
-    <div id="nest" class="projectWrapper">
-        <h1 class="pathos padding sticky overlay">Nest</h1>
-        <div class="project">
-            <video class="video" autoplay onmouseover="play()" onmouseout="pause()" loop muted playsinline src="9_Nest/_Nest.mp4">Video not available</video>
-            <div class="slideshow">
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_1.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_2.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_3.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_4.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_5.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_6.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_7.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_8.jpg" style="width:100%">
-                </div>
-                <div class="mySlides9">
-                    <img src="9_Nest/Slideshow/Nest_9.jpg" style="width:100%">
+        <br>
+
+        <div id="messer" class="projectWrapper">
+            <h1 id="8" class="pathos padding sticky overlay">Messer</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides8">
+                        <video class="video" autoplay playsinline onmouseover="play()" onmouseout="pause()" preload loop mute onplaying="this.controls=false" src="8_Messer/8_Messer_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides8">
+                        <img src="8_Messer/Slideshow/Messer_1.jpg">
+                    </div>
+                    <div class="mySlides8">
+                        <img src="8_Messer/Slideshow/Messer_2.jpg">
+                    </div>
+                    <div class="mySlides8">
+                        <img src="8_Messer/Slideshow/Messer_3.jpg">
+                    </div>
+                    <div class="mySlides8">
+                        <img src="8_Messer/Slideshow/Messer_4.jpg">
+                    </div>
+                    <div class="mySlides8">
+                        <img src="8_Messer/Slideshow/Messer_5.jpg">
+                    </div>
+                    <div class="mySlides8" data-text-content>
+                        <h1 class="pathos title">Messer</h1>
+                        <div class="markpro description">—</div>
+                        <div class="pathos tags">2016; HSS Stahl (Sägeblatt), wasserstrahlgeschnitten, Corian, Ebenholz, Ahorn, Eibe</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(7)" onclick="plusSlides(-1, 7)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(7)" onclick="plusSlides(1, 7)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
-                <a class="prev pathos" onclick="plusSlides(-1, 8)">&#10094;</a>
-                <a class="next pathos" onclick="plusSlides(1, 8)">&#10095;</a>
             </div>
-            <div class="markpro padding-sides description">Auf ästhetische Weise zeigen die Gefäße die Ambivalenz zwischen einer scheinbar äußeren Gewalteinwirkung und der Funktion des Zusammenhalts. So steht die tatsächliche Wirkung der Keile im Widerspruch zu deren visuellen Eindruck. Diese berühren Wände und Boden lediglich über einige Kanten, verbinden und arretieren diese aber dadurch, sind somit unabdingbar für den Zusammenhalt der Gefäße. Dennoch vermitteln die Keile einen destruktiven Charakter, sie erzeugen tiefe Einschnitte auf den Oberflächen, durchdringen das gesamte Objekt und scheinen dessen Funktion zu sabotieren. Bedingt durch das Verfahren des Wasserstrahlschneidens, sind die Durchdringungen der sich diagonal kreuzenden Elemente rechtwinklig in das Material gearbeitet. Die daraus resultierenden Spalten werden so zum elementaren gestalterische Mittel.</div>
-            <div class="pathos padding tags">2012 — 2014; Aluminium, Stahl, wasserstrahlgeschnitten, verkeilt, glasperlgestrahlt, verzundert, brüniert</div>
         </div>
+
+        <br>
+
+        <div id="nest" class="projectWrapper">
+            <h1 id="9" class="pathos padding sticky overlay">Nest</h1>
+            <div class="project">
+
+                <div class="slideshow">
+                    <div class="mySlides9">
+                        <video class="video" autoplay onmouseover="play()" onmouseout="pause()" preload loop mute onplaying="this.controls=false" playsinline src="9_Nest/9_Nest_new.mp4">Video not available</video>
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_1.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_2.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_3.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_4.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_5.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_6.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_7.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_8.jpg">
+                    </div>
+                    <div class="mySlides9">
+                        <img src="9_Nest/Slideshow/Nest_9.jpg">
+                    </div>
+
+                    <div class="mySlides9" data-text-content>
+                        <h1 class="pathos title">Nest</h1>
+                        <div class="markpro description">Auf ästhetische Weise zeigen die Gefäße die Ambivalenz zwischen einer scheinbar äußeren Gewalteinwirkung und der Funktion des Zusammenhalts. So steht die tatsächliche Wirkung der Keile im Widerspruch zu deren visuellen Eindruck. Diese berühren Wände und Boden lediglich über einige Kanten, verbinden und arretieren diese aber dadurch, sind somit unabdingbar für den Zusammenhalt der Gefäße. Dennoch vermitteln die Keile einen destruktiven Charakter, sie erzeugen tiefe Einschnitte auf den Oberflächen, durchdringen das gesamte Objekt und scheinen dessen Funktion zu sabotieren. Bedingt durch das Verfahren des Wasserstrahlschneidens, sind die Durchdringungen der sich diagonal kreuzenden Elemente rechtwinklig in das Material gearbeitet. Die daraus resultierenden Spalten werden so zum elementaren gestalterische Mittel.</div>
+                        <div class="pathos tags">2012 — 2014; Aluminium, Stahl, wasserstrahlgeschnitten, verkeilt, glasperlgestrahlt, verzundert, brüniert</div>
+                    </div>
+
+                    <a class="prev pathos" onmouseover="showTails(8)" onclick="plusSlides(-1, 8)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(8)" onclick="plusSlides(1, 8)"><img class="arrow" src="Icons/arrow_right.png"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
     </div>
 
-    <br>
-
+    <script src="alt.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>

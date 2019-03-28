@@ -176,14 +176,14 @@ $(document).bind('mousemove', function (e) {
     var prevtail = document.getElementById("prevtail");
     var nexttail = document.getElementById("nexttail");
     
-    $('#prevtail').animate({
+    $('#prevtail').css({
         left: (e.pageX + w/6) - prevtail.clientWidth/2,
         top: e.pageY - prevtail.clientHeight/2
-    }, 15);
-    $('#nexttail').animate({
+    });
+    $('#nexttail').css({
         left: (e.pageX - w/6) - nexttail.clientWidth/2,
         top: e.pageY - nexttail.clientHeight/2
-    }, 15);
+    });
 });
 
 
