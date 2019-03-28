@@ -136,16 +136,14 @@ function pad(n, width, z) {
 function showmenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
-    name.innerHTML = "Kontakt";
     menu.style.opacity = 1;
-    menu.style.height = "120px";
+    menu.style.height = "250px";
 
 }
 
 function hidemenu() {
     var menu = document.getElementById("menu");
     var name = document.getElementById("nametext");
-    name.innerHTML = "Matteo Bauer-Bornemann";
     menu.style.opacity = 0;
     menu.style.height = "0px";
 }
@@ -158,13 +156,11 @@ function togglemenu() {
     var state = menu.style.opacity;
 
     if (state == 0) {
-        name.innerHTML = "Kontakt";
         div.style.color = "#fff";
         div.style.backgroundColor = "#2e2382";
         menu.style.opacity = 1;
-        menu.style.height = "120px";
+        menu.style.height = "250px";
     } else if (state == 1) {
-        name.innerHTML = "Matteo Bauer-Bornemann";
         div.style.color = "#2e2382";
         div.style.backgroundColor = "#fff";
         menu.style.opacity = 0;
@@ -181,11 +177,11 @@ $(document).bind('mousemove', function (e) {
     var nexttail = document.getElementById("nexttail");
     
     $('#prevtail').animate({
-        left: (e.pageX + w/4) - prevtail.clientWidth/2,
+        left: (e.pageX + w/6) - prevtail.clientWidth/2,
         top: e.pageY - prevtail.clientHeight/2
     }, 15);
     $('#nexttail').animate({
-        left: (e.pageX - w/4) - nexttail.clientWidth/2,
+        left: (e.pageX - w/6) - nexttail.clientWidth/2,
         top: e.pageY - nexttail.clientHeight/2
     }, 15);
 });

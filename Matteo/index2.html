@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>demo</title>
+    <title>Matteo-Bauer-Bornemann</title>
+    <link rel="icon" href="Icons/Favicon.png">
     <meta name=viewport content="width=device-width,initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="loading.css" rel="stylesheet">
@@ -27,13 +28,14 @@
 }
     </style>
     <script>
-        window.addEventListener('load', function() {
+        /*window.addEventListener('load', function() {
                     console.log("loaded");
                     var loader = document.getElementsByClassName("loading");
                     loader[0].style.display = "none";
                     var container = document.getElementsByClassName("container");
                     container[0].style.opacity = 1;
-                });
+                });*/
+        
         setTimeout(function() {
                     console.log("timeout");
                     var loader = document.getElementsByClassName("loading");
@@ -46,23 +48,27 @@
 
 
     <div class="loading">
-        <div class="loading-text">
-            <span class="loading-text-words">L</span>
-            <span class="loading-text-words">O</span>
-            <span class="loading-text-words">A</span>
-            <span class="loading-text-words">D</span>
-            <span class="loading-text-words">I</span>
-            <span class="loading-text-words">N</span>
-            <span class="loading-text-words">G</span>
-        </div>
+        <div class="loader">
+        
+    </div>
     </div>
     <div id="prevtail" class="pathos colors">01/10</div>
     <div id="nexttail" class="pathos colors">01/10</div>
     <div class="container colors" onload="loaded()">
         <div id="name" onclick="togglemenu()">
             <h1 id="nametext" class="markpro">Matteo Bauer-Bornemann</h1>
-            <h1 id="menu" class="markpro"><a href="mailto:matteo@bauer-bornemann.de">matteo@bauer-bornemann.de</a>
-                <br>+49 173 8602811</h1>
+            <h1 id="menu" class="markpro"><br>
+                <a class="link" href="https://www.instagram.com/matteo_bauer_bornemann/" >Insta</a>
+                <a class="pathos detail" href="https://www.instagram.com/matteo_bauer_bornemann/">matteo_bauer_bornemann</a>
+                <br>
+                <a class="link" href="mailto:matteo@bauer-bornemann.de">E-mail</a>
+                <a href="mailto:matteo@bauer-bornemann.de" class="pathos detail">matteo@bauer-bornemann.de</a>
+                <br>
+                <a class="link" href="tel:+4917640206387">Phone</a>
+                <a href="tel:+4917640206387" class="pathos detail">+49 17 640206387</a>
+                <br>
+                <a class="copywrite pathos">&#169; 2019 Design: Matteo Bauer-Bornemann; Graphics: Lena Windisch; Code: Jorim Theuns</a>
+                </h1>
         </div>
 
         <div id="halo" class="projectWrapper">
@@ -113,8 +119,8 @@
                         <div class="pathos tags">2018; Stahl, lasergeschnitten, gelötet, geschweißt, gedreht, Cfk-Rohr, Hochglanzpolierter Edelstahl, lackiert, Chemisch Nickel schwarz, High Power Led, Linsen</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(0)" onclick="plusSlides(-1, 0)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(0)" onclick="plusSlides(1, 0)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(0)" onclick="plusSlides(-1, 0)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(0)" onclick="plusSlides(1, 0)"><img  class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -162,8 +168,8 @@
                         <div class="pathos tags">2015; Aluminium, Acrylglas, PVC, Ir-LEDs, Raspberry Pi, NoIR Infrared Camera</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(1)" onclick="plusSlides(-1, 1)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(1)" onclick="plusSlides(1, 1)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(1)" onclick="plusSlides(-1, 1)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(1)" onclick="plusSlides(1, 1)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -201,8 +207,8 @@
                         <div class="pathos tags">2015 — 16</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(2)" onclick="plusSlides(-1, 2)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(2)" onclick="plusSlides(1, 2)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(2)" onclick="plusSlides(-1, 2)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(2)" onclick="plusSlides(1, 2)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -257,17 +263,14 @@
                     <div class="mySlides4">
                         <img src="4_Younit/Slideshow/Younit_13.jpg">
                     </div>
-                    <div class="mySlides4">
-                        <img src="4_Younit/Slideshow/Younit_14.jpg">
-                    </div>
                     <div class="mySlides4 relativeSlide" data-text-content>
                         <h1 class="pathos title">Younit</h1>
                         <div class="markpro description">„Younit“ stellt einen experimentellen Ansatz zum Gebrauch ungenutzter Ressourcen dar. Exemplarisch handelt es sich bei der Umsetzung um Stühle, deren Einzelteile aus Resten, die beim Zuschnitt von Plattenmaterial entstehen, bezogen werden. Die Konstruktion der Stühle ist so angelegt, dass sie universell anwendbar ist und mit einem geringen Maß an Vorkenntnissen und Hilfsmitteln, selbstständig zu realisieren ist. Durch die Verwendung unterschiedlicher Materialien, entsteht eine unerschöpfliche Vielfalt an möglichen Variationen, was dazu führt, dass jedes Objekt eine ganz eigene Ästhetik aufweist. Diese zeichnet sich durch die extremen Kombinationen der verschiedenen Stoffe aus, welche mit den unterschiedlichsten und auch gegensätzlichsten Assoziationen belegt sind. Dies soll bewusst polarisieren und die qualitative und monetäre Wertschätzung, die an die verschiedenen Materialien geknüpft sind, in Frage stellen.</div>
                         <div class="pathos tags">2016; Stahl, Alu, Drahtglas, Corian, OSB, Marmor, Kalkstein, Sperrholz, Acrylglas, Spanplatte, Kupfer, wasserstrahlgeschnitten</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(3)" onclick="plusSlides(-1, 3)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(3)" onclick="plusSlides(1, 3)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(3)" onclick="plusSlides(-1, 3)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(3)" onclick="plusSlides(1, 3)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -319,8 +322,8 @@
                         <div class="pathos tags">2017; Stahl, laserstrahlgeschnitten, Wig-geschweißt, sandgestrahlt, galv. verzinkt, gelb chromatiert, Aluminium, sandgestrahlt, transparent pulverbeschichtet</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(4)" onclick="plusSlides(-1, 4)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(4)" onclick="plusSlides(1, 4)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(4)" onclick="plusSlides(-1, 4)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(4)" onclick="plusSlides(1, 4)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -369,8 +372,8 @@
                         <div class="pathos tags">2015; MDF, CNC-gefräst, lackiert, Aluminium</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(5)" onclick="plusSlides(-1, 5)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(5)" onclick="plusSlides(1, 5)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(5)" onclick="plusSlides(-1, 5)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(5)" onclick="plusSlides(1, 5)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -413,8 +416,8 @@
                         <div class="pathos tags">2013 — 2014; verschiedene Materialien</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(6)" onclick="plusSlides(-1, 6)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(6)" onclick="plusSlides(1, 6)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(6)" onclick="plusSlides(-1, 6)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(6)" onclick="plusSlides(1, 6)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -451,8 +454,8 @@
                         <div class="pathos tags">2016; HSS Stahl (Sägeblatt), wasserstrahlgeschnitten, Corian, Ebenholz, Ahorn, Eibe</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(7)" onclick="plusSlides(-1, 7)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(7)" onclick="plusSlides(1, 7)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(7)" onclick="plusSlides(-1, 7)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(7)" onclick="plusSlides(1, 7)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
@@ -502,13 +505,18 @@
                         <div class="pathos tags">2012 — 2014; Aluminium, Stahl, wasserstrahlgeschnitten, verkeilt, glasperlgestrahlt, verzundert, brüniert</div>
                     </div>
 
-                    <a class="prev pathos" onmouseover="showTails(8)" onclick="plusSlides(-1, 8)">&#10094;</a>
-                    <a class="next pathos" onmouseover="showTails(8)" onclick="plusSlides(1, 8)">&#10095;</a>
+                    <a class="prev pathos" onmouseover="showTails(8)" onclick="plusSlides(-1, 8)"><img class="arrow" src="Icons/arrow_left.png"></a>
+                    <a class="next pathos" onmouseover="showTails(8)" onclick="plusSlides(1, 8)"><img class="arrow" src="Icons/arrow_right.png"></a>
                 </div>
 
             </div>
         </div>
 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
 
 

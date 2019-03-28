@@ -118,8 +118,3 @@ function togglemenu() {
 
 }
 
-function tail(e){
-    var tail = document.getElementById("tail");
-    tail.style.left = e.pageX + 20;
-    tail.style.top = e.pageY;
-}
