@@ -1,0 +1,28 @@
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    z-index: 1000;
+}
+
+button:hover {
+    background-color: #AF4C50;
+}
+
+.buttons {
+    position: absolute;
+    top:10px;
+}
+
+h1{
+    color:white;
+}
+
+.a-enter-vr-button{
+    display:none;
+}

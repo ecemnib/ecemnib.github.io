@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        var grow = new Event('grow');
+        var shrink = new Event('shrink');
+
+        function myFunction(parent, child) {
+            console.log(parent);
+            document.getElementById("type").innerHTML = child.id;
+            document.querySelectorAll(".parent").forEach(function(el){
+                console.log(el);
+                el.dispatchEvent(shrink);
+            });
+            document.querySelectorAll(".child").forEach(function(el){
+                console.log(el);
+                el.dispatchEvent(shrink);
+            });
+            parent.dispatchEvent(grow);
+            child.dispatchEvent(grow);
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <!-- Specify our scene. -->
+    <a-scene renderer="antialias:true" background="" loading-screen="dotsColor: white; backgroundColor: black">
+        <a-assets>
+            <a-mixin id="parent" scale="1 1 1" animation__grow="property: scale; to: 1.5 1.5 1.5; dur: 3000; startEvents: grow" animation__shrink="property: scale; to: 1 1 1; dur: 3000; startEvents: shrink"></a-mixin>
+            <a-mixin id="child" scale="0.5 0.5 0.5" animation__grow="property: scale; to: 1 1 1; dur: 3000; startEvents: grow" animation__shrink="property: scale; to: 0.5 0.5 0.5; dur: 3000; startEvents: shrink" geometry="primitive: sphere; segmentsWidth: 72; segmentsHeight: 144"></a-mixin>
+        </a-assets>
+        
+        <a-entity camera position="0 0 6"></a-entity>
+
+        <a-entity>
+            <a-sphere id="sand" position="0 0 0" scale="1 1 1" material="src: rock_sphere.jpg; color: #fff; roughness: 1; metalness: 0" animation="property: rotation; from: 0 0 0; to: 360 360 0; loop: true; dur: 20000; easing: linear">
+
+                <a-entity mixin="parent" class="parent" id="vegparent">
+                    <a-entity mixin="child" class="child" id="veg" position="0 1 0" material="src: forrest/forrest_ground_01_diff_1k.jpg; ambientOcclusionMap: forrest/forrest_ground_01_ao_1k.jpg; normalMap: forrest/forrest_ground_01_nor_1k.jpg"></a-entity>
+                </a-entity>
+
+                <a-entity mixin="parent" class="parent" id="humanparent">
+                    <a-entity mixin="child" class="child" id="human" position="0 -1 0" material="src: metal/metal_plate_diff_1k.jpg; ambientOcclusionMap: metal/metal_plate_AO_1k.jpg; normalMap: metal/metal_plate_Nor_1k.jpg"></a-entity>
+                </a-entity>
+
+                <a-entity mixin="parent" class="parent" id="waterparent">
+                    <a-entity mixin="child" class="child" id="water" position="1 0 0" material="src: water.jpeg"></a-entity>
+                </a-entity>
+
+                <a-entity mixin="parent" class="parent" id="resparent">
+                    <a-entity mixin="child" class="child" id="resources" position="-0.5 0 0.86" material="src: oil.jpeg"></a-entity>
+                </a-entity>
+
+                <a-entity mixin="parent" class="parent" id="propparent">
+                    <a-entity mixin="child" class="child" id="propaganda" position="-0.5 0 -0.86" material="src: propaganda.jpeg"></a-entity>
+                </a-entity>
+
+            </a-sphere>
+        </a-entity>
+    </a-scene>
+    <div class="buttons">
+        <button type="button" onclick="myFunction(vegparent, veg)">Veg</button>
+        <button type="button" onclick="myFunction(humanparent, human)">Human</button>
+        <button type="button" onclick="myFunction(waterparent, water)">Water</button>
+        <button type="button" onclick="myFunction(resparent, resources)">Resources</button>
+        <button type="button" onclick="myFunction(propparent, propaganda)">Propaganda</button>
+        <h1 id="type">Type</h1>
+    </div>
+</body>
