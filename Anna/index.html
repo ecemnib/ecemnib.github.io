@@ -13,18 +13,22 @@
         var shrink = new Event('shrink');
 
         function myFunction(parent, child) {
-            console.log(parent);
             document.getElementById("type").innerHTML = child.id;
-            document.querySelectorAll(".parent").forEach(function(el){
-                console.log(el);
-                el.dispatchEvent(shrink);
-            });
-            document.querySelectorAll(".child").forEach(function(el){
-                console.log(el);
-                el.dispatchEvent(shrink);
-            });
-            parent.dispatchEvent(grow);
-            child.dispatchEvent(grow);
+
+            var button = document.getElementById(child.id + "_button")
+            console.log(button);
+
+            if (button.value == "off") {
+                button.value = "on";
+                button.classList.add("on");
+                parent.dispatchEvent(grow);
+                child.dispatchEvent(grow);
+            } else if (button.value == "on") {
+                button.value = "off";
+                button.classList.remove("on");
+                parent.dispatchEvent(shrink);
+                child.dispatchEvent(shrink);
+            }
         }
 
     </script>
@@ -38,7 +42,7 @@
             <a-mixin id="parent" scale="1 1 1" animation__grow="property: scale; to: 1.5 1.5 1.5; dur: 3000; easing: easeInOutElastic; startEvents: grow" animation__shrink="property: scale; to: 1 1 1; dur: 3000; easing: easeInOutElastic; startEvents: shrink"></a-mixin>
             <a-mixin id="child" scale="0.5 0.5 0.5" animation__grow="property: scale; to: 1 1 1; dur: 3000; easing: easeInOutElastic; startEvents: grow" animation__shrink="property: scale; to: 0.5 0.5 0.5; dur: 3000; easing: easeInOutElastic; startEvents: shrink" geometry="primitive: sphere; segmentsWidth: 72; segmentsHeight: 144"></a-mixin>
         </a-assets>
-        
+
         <a-entity camera position="0 0 6"></a-entity>
 
         <a-entity>
@@ -68,11 +72,11 @@
         </a-entity>
     </a-scene>
     <div class="buttons">
-        <button type="button" onclick="myFunction(vegparent, veg)">Veg</button>
-        <button type="button" onclick="myFunction(humanparent, human)">Human</button>
-        <button type="button" onclick="myFunction(waterparent, water)">Water</button>
-        <button type="button" onclick="myFunction(resparent, resources)">Resources</button>
-        <button type="button" onclick="myFunction(propparent, propaganda)">Propaganda</button>
+        <button id="veg_button" type="button" onclick="myFunction(vegparent, veg)" value="off">Veg</button>
+        <button id="human_button" type="button" onclick="myFunction(humanparent, human)" value="off">Human</button>
+        <button id="water_button" type="button" onclick="myFunction(waterparent, water)" value="off">Water</button>
+        <button id="resources_button" type="button" onclick="myFunction(resparent, resources)" value="off">Resources</button>
+        <button id="propaganda_button" type="button" onclick="myFunction(propparent, propaganda)" value="off">Propaganda</button>
         <h1 id="type">Type</h1>
     </div>
 </body>
